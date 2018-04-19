@@ -42,16 +42,30 @@ Aplikace slouží jako rezervační systém pro multifunkční sportoviště. Z�
 2. UseCase Diagram:
 ![UseCase Diagram](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/UseCase%20Diagram.png)
 
+
+Use Case Specifikaci můžete najít na následujícím odkazu: [Use Case Specifikace](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Use%20Cases%20specification.docx). (Dokument je nutné si stáhnout.)
+
 ### Návrhy obrazovek
 
-1. Návrh obrazovky *"Vytvoření rezervace"*:
+**1. Návrh obrazovky *"Vytvoření rezervace"*:**
 ![Návrh obrazovky "vytvoření rezervace"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/Návrh1.png)
 
-2. Návrh obrazovky *"Hlavní menu"*:
+**Popis**: Zákazník si vybere sportoviště, které chce rezervovat, podle dostupnosti se mu zobrazí možné dny a časy. V pravé horní části obrazovky se mu zobrazí shrnutí jeho objednávky. Pro dokončení rezervace vyplní své kontaktní údaje a klikne na tlačítko "Dokončit".
+
+**2. Návrh obrazovky *"Hlavní menu"*:**
 ![Návrh obrazovky "hlavní menu"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/Návrh2.png)
 
-3. Návrh obrazovky *"Blokace sportoviště"*:
+**Popis**: Zobrazení hlavního menu pro uživatele s administrátorskými právy.
+
+**3. Návrh obrazovky *"Blokace sportoviště"*:**
 ![Návrh obrazovky "blokace sportoviště"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/Návrh3.png)
+
+**Popis**: Zablokování sportoviště (např. z důvodu technických problémů apod.) ze strany zaměstnance/administrátora. V levé části obrazovky vidí navigaci (strom aplikace). Dále vybere konkrétní sportoviště a vyplní příslušné informace.
+
+
+### Databázová struktura
+
+Příklad databázové struktury je dostupný na následujícím odkazu: [Databázová struktura](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Struktura-databáze.xlsx). (Dokument je nutné si stáhnout.)
 
 
 
