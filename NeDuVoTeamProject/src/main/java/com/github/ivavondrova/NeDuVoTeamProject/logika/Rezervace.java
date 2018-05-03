@@ -1,11 +1,13 @@
+package com.github.ivavondrova.NeDuVoTeamProject.logika;
+
 public class Rezervace {
 
 	private int id;
 
 	private Date datum;
 
-	private int rezervace od;
+	private int rezervaceod;
 
-	private int rezervace do;
+	private int rezervacedo;
 
 }
