@@ -1,6 +1,8 @@
-public class Admin extends Osoba s přístupem {
+package com.github.ivavondrova.NeDuVoTeamProject.logika;
 
-	private char přihlašovací jméno;
+public class Admin extends Osobaspristupem {
+
+	private char prihlasovaci_jmeno;
 
 	private char práva;
 
