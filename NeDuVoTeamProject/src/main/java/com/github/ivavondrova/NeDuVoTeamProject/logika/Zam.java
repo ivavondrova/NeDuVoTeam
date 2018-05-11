@@ -1,6 +1,8 @@
-public class Zam extends Osoba s přístupem {
+package com.github.ivavondrova.NeDuVoTeamProject.logika;
 
-	private char přihlašovací jméno;
+public class Zam extends Osobaspristupem{
+
+	private char prihlasovacijmeno;
 
 	private char práva;
 
