@@ -11,7 +11,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -56,22 +55,13 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.23942093541202672" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane opacity="0.8" style="-fx-background-color: brown;">
-          <children>
-                  <TextArea editable="false" layoutX="8.0" layoutY="21.0" prefHeight="521.0" prefWidth="195.0" text="KDE JSTE?&#10;&#10;REZERVACE&#10;&#10;Seznam rezervací&#10;&#10;Správa rezervací&#10;&#10;     Statistiky &#10;&#10;     Blokace&#10;&#10;&#10;ZAMĚSTNANCI&#10;&#10;Tvorba zam. účtu&#10;&#10;Změna osobních údajů&#10;&#10;Nastavení účtů&#10;&#10;&#10;SPORTOVIŠTĚ&#10;&#10;Vytvořit&#10;&#10;Změnit informace&#10;&#10;Smazat">
-                     <opaqueInsets>
-                        <Insets left="10.0" right="10.0" />
-                     </opaqueInsets>
-                  </TextArea>
-          </children>
-        </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="639.0">
               <children>
-                        <ImageView fitHeight="674.0" fitWidth="809.0" layoutX="-32.0" layoutY="-29.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="726.0" fitWidth="1113.0" layoutX="-32.0" layoutY="-29.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../../../../../../../Documents/VŠE/Bakalářské%20studium/4.%20semestr/4IT115%20Softwarové%20inženýrství/4IT115%20-%20NeDuVoTeam%20Project%20Zahraj%20si/Sportoviště%201.jpg" />
                            </image>

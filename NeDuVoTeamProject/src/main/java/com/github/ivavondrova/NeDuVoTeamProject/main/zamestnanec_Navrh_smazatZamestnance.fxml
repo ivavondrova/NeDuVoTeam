@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
@@ -12,6 +11,7 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -55,43 +55,27 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.23942093541202672" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane opacity="0.8" style="-fx-background-color: brown;">
-          <children>
-                  <TextArea editable="false" layoutX="8.0" layoutY="21.0" prefHeight="521.0" prefWidth="195.0" text="KDE JSTE?&#10;&#10;REZERVACE&#10;&#10;Seznam rezervací&#10;&#10;Správa rezervací&#10;&#10;     Statistiky &#10;&#10;     Blokace&#10;&#10;&#10;ZAMĚSTNANCI&#10;&#10;Tvorba zam. účtu&#10;&#10;Změna osobních údajů&#10;&#10;Nastavení účtů&#10;&#10;&#10;SPORTOVIŠTĚ&#10;&#10;Vytvořit&#10;&#10;Změnit informace&#10;&#10;Smazat">
-                     <opaqueInsets>
-                        <Insets left="10.0" right="10.0" />
-                     </opaqueInsets>
-                  </TextArea>
-          </children>
-        </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="639.0">
               <children>
-                        <ImageView fitHeight="674.0" fitWidth="809.0" layoutX="-32.0" layoutY="-29.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="720.0" fitWidth="1099.0" layoutX="-32.0" layoutY="-29.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../../../../../../../../../Documents/VŠE/Bakalářské%20studium/4.%20semestr/4IT115%20Softwarové%20inženýrství/4IT115%20-%20NeDuVoTeam%20Project%20Zahraj%20si/Sportoviště%201.jpg" />
                            </image>
                         </ImageView>
-                        <Button layoutX="566.0" layoutY="495.0" mnemonicParsing="false" text="Pokračovat" />
-                <Label alignment="CENTER" layoutX="14.0" layoutY="23.0" style="&#10;" text="Změnit informace o sportovišti" textAlignment="CENTER" textFill="#9a4d12" wrapText="false">
+                        <Button layoutX="566.0" layoutY="495.0" mnemonicParsing="false" text="Dokončit" />
+                <Label alignment="CENTER" layoutX="14.0" layoutY="23.0" style="&#10;" text="Smazat uživatele" textAlignment="CENTER" textFill="#9a4d12" wrapText="false">
                            <font>
                       <Font size="18.0" fx:id="x1" />
                            </font></Label>
                         <ListView layoutX="14.0" layoutY="54.0" prefHeight="487.0" prefWidth="173.0" />
-                        <Label layoutX="210.0" layoutY="65.0" text="Název sportoviště" />
-                        <TextArea layoutX="439.0" layoutY="52.0" prefHeight="29.0" prefWidth="200.0" />
-                        <Label layoutX="210.0" layoutY="126.0" text="Jaké informace chcete změnit?" />
-                        <CheckBox layoutX="436.0" layoutY="126.0" mnemonicParsing="false" text="Název" />
-                        <CheckBox layoutX="436.0" layoutY="151.0" mnemonicParsing="false" text="Popis" />
-                        <CheckBox layoutX="436.0" layoutY="177.0" mnemonicParsing="false" text="Adresa" />
-                        <CheckBox layoutX="436.0" layoutY="203.0" mnemonicParsing="false" text="Rezervace celého sportoviště" />
-                        <CheckBox layoutX="437.0" layoutY="230.0" mnemonicParsing="false" text="Maximální kapacita" />
-                        <CheckBox layoutX="437.0" layoutY="256.0" mnemonicParsing="false" text="Cena" />
-                        <CheckBox layoutX="437.0" layoutY="280.0" mnemonicParsing="false" text="Otevřeno od" />
-                        <CheckBox layoutX="437.0" layoutY="308.0" mnemonicParsing="false" text="Otevřeno do" />
+                        <TextArea layoutX="389.0" layoutY="135.0" prefHeight="29.0" prefWidth="200.0" />
+                        <Label layoutX="215.0" layoutY="148.0" text="Uživatelské jméno" />
+                        <Label layoutX="215.0" layoutY="289.0" text="Důvod" />
+                        <TextField layoutX="389.0" layoutY="276.0" prefHeight="109.0" prefWidth="244.0" />
               </children>
             </AnchorPane>
           </content>

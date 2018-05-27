@@ -19,17 +19,12 @@
                   <Image url="@Sportoviště%201.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="52.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Rezervace" textAlignment="CENTER">
+            <Button layoutX="116.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Zaměstnanci" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="241.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Zaměstnanci">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="440.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Sportoviště">
+            <Button layoutX="372.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Sportoviště">
                <font>
                   <Font size="20.0" />
                </font>
