@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="481.0" fitWidth="642.0" layoutY="-51.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../../Documents/VŠE/Bakalářské%20studium/4.%20semestr/4IT115%20Softwarové%20inženýrství/4IT115%20-%20NeDuVoTeam%20Project%20Zahraj%20si/Sportoviště%201.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="50.0" layoutY="272.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="363.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Spravovat zaměstnanecké účty" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="50.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="363.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Spravovat sportovišt" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="50.0" layoutY="78.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="363.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Správa rezervací">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+          <MenuBar layoutX="-10.0" prefHeight="29.0" prefWidth="650.0">
+            <menus>
+              <Menu mnemonicParsing="false" text="Uživatel">
+                <items>
+                  <MenuItem mnemonicParsing="false" text="Přepnout uživatele" />
+                  <MenuItem mnemonicParsing="false" text="Odhlásit" />
+                </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="O nás">
+                <items>
+                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                </items>
+              </Menu>
+            </menus>
+          </MenuBar>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -1,3 +1,5 @@
+package com.github.ivavondrova.NeDuVoTeamProject.logika;
+
 public class Blokace {
 
 	private int id;
