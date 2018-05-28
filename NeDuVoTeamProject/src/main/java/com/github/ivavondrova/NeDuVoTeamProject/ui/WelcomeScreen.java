@@ -22,7 +22,7 @@ public class WelcomeScreen {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass()
 		          .getResource
-		          ("/Navrh_registrace.fxml"));
+		          ("/rezervace.fxml"));
 		Parent root = loader.load();
 		RezervationScreen controller = loader.getController();
 		
@@ -37,16 +37,12 @@ public class WelcomeScreen {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass()
 		          .getResource
-		          ("/Navrh_prihlaseni.fxml"));
+		          ("/zamestnanec_prihlaseni.fxml"));
 		Parent root = loader.load();
 		LoginController controller = loader.getController();
 		
       primaryStage.setTitle("Rezervace");
       primaryStage.setScene(new Scene(root));
       primaryStage.show();
-	}
-	
-	public void prepnisportoviste() {
-		
 	}
 }

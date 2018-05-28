@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.WelcomeScreen">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zam_navigation">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -19,22 +19,22 @@
                   <Image url="@Sportoviště%201.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="rezervace" layoutX="52.0" layoutY="173.0" mnemonicParsing="false" onAction="#prepnirezervace" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Rezervace" textAlignment="CENTER">
+            <Button layoutX="54.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Zaměstnanci" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="zamestnanci" layoutX="241.0" layoutY="173.0" mnemonicParsing="false" onAction="#prepnizamestnanci" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Zaměstnanci">
+            <Button layoutX="236.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Sportoviště">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="sportoviste" layoutX="440.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Sportoviště">
+            <Button layoutX="408.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Rezervace" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-          <MenuBar layoutX="-10.0" prefHeight="29.0" prefWidth="764.0">
+          <MenuBar layoutX="-10.0" prefHeight="29.0" prefWidth="650.0">
             <menus>
               <Menu mnemonicParsing="false" text="Uživatel">
                 <items>

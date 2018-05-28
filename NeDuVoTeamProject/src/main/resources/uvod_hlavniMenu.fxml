@@ -10,26 +10,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.WelcomeScreen">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fitHeight="481.0" fitWidth="642.0" layoutY="-51.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="480.0" fitWidth="754.0" layoutY="-51.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../../../../../Documents/VŠE/Bakalářské%20studium/4.%20semestr/4IT115%20Softwarové%20inženýrství/4IT115%20-%20NeDuVoTeam%20Project%20Zahraj%20si/Sportoviště%201.jpg" />
+                  <Image url="@Sportoviště%201.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="52.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Vytvořit" textAlignment="CENTER">
+            <Button layoutX="116.0" layoutY="173.0" mnemonicParsing="false" onAction="#prepnirezervace" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Rezervace" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="241.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Změnit informace" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button layoutX="440.0" layoutY="173.0" mnemonicParsing="false" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Smazat">
+            <Button layoutX="372.0" layoutY="173.0" mnemonicParsing="false" onAction="#prepnizamestnanci" opacity="0.8" prefHeight="84.0" prefWidth="159.0" style="-fx-background-color: #dd660a#dd660a; -fx-border-color: black;" text="Zaměstnanec">
                <font>
                   <Font size="20.0" />
                </font>

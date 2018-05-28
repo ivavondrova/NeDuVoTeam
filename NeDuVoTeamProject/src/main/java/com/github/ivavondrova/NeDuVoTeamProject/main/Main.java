@@ -21,7 +21,7 @@ public class Main extends Application{
 	public void start(Stage primaryStage) throws Exception {
 		
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("/Navrh_admin_hlavniMenu.fxml"));
+		loader.setLocation(getClass().getResource("/uvod_hlavniMenu.fxml"));
 		Parent root = loader.load();
 		WelcomeScreen controller = loader.getController();
 		

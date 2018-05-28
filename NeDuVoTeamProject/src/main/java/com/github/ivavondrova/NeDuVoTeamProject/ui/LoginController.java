@@ -50,9 +50,9 @@ public class LoginController implements Initializable{
 						FXMLLoader loader = new FXMLLoader();
 						loader.setLocation(getClass()
 						          .getResource
-						          ("/Navrh_prihlaseni.fxml"));
+						          ("/zamestnanec_navigace.fxml"));
 						Parent root = loader.load();
-						LoginController controller = loader.getController();
+						zam_navigation controller = loader.getController();
 						
 				      primaryStage.setTitle("Rezervace");
 				      primaryStage.setScene(new Scene(root));
