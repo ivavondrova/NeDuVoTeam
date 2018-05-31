@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.web.WebView;
 import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert;
@@ -98,4 +99,17 @@ public class LoginController implements Initializable{
 	    	        alert.setContentText("Zadané jméno nebo heslo jsou chybné!");
 	    	        alert.showAndWait();
 	    		}
+	    		
+	    		/**
+	    		 * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
+	    		 */
+	    		
+	    		public void oNas() {
+	    			Alert alert = new Alert(Alert.AlertType.INFORMATION);
+	    	        alert.setTitle("Zahraj si");
+	    	        alert.setHeaderText("Zahraj si \n4IT115 - Týmová semestrální práce");
+	    	        alert.setContentText("Vladimír Dušek, Petr Netolický, Iva Vondrová \nLS 2017/2018 \nFIS VŠE v Praze");
+	    	        alert.showAndWait();
+	    		}
+	    		
 }
