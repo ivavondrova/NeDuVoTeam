@@ -16,4 +16,6 @@ public class RezervationScreen {
         alert.showAndWait();
 	}
 
+	public void cenik() {
+	}
 }
