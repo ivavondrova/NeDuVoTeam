@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zamestnanciSprava">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zamestnanciSprava">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -32,9 +33,9 @@
                 <TableColumn prefWidth="75.0" text="C2" />
               </columns>
             </TableView>
-            <Button layoutX="431.0" layoutY="348.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" prefHeight="45.0" text="Smazat stávající" textAlignment="CENTER" wrapText="true" />
-            <Button layoutX="274.0" layoutY="346.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" prefHeight="45.0" text="Upravit stávající" textAlignment="CENTER" wrapText="true" />
-            <Button layoutX="108.0" layoutY="346.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="Vytvořit nový účet" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="431.0" layoutY="348.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" onAction="#smazat_ucet" prefHeight="45.0" text="Smazat stávající" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="274.0" layoutY="346.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" onAction="#upravit_ucet" prefHeight="45.0" text="Upravit stávající" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="108.0" layoutY="346.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" onAction="#vytvorit_ucet" prefHeight="45.0" prefWidth="100.0" text="Vytvořit nový účet" textAlignment="CENTER" wrapText="true" />
             <Label alignment="CENTER" layoutX="30.0" layoutY="49.0" style="&#10;" text="Zaměstnanci" textAlignment="CENTER" textFill="#9a4d12" wrapText="false">
                <font>
                   <Font size="18.0" fx:id="x1" />
@@ -42,7 +43,10 @@
             </Label>
             <MenuBar fx:id="menu" layoutX="1.0" layoutY="1.0" prefHeight="29.0" prefWidth="646.0">
                <menus>
-                   <Menu mnemonicParsing="false" onAction="#oNas" text="O nás" />
+                   <Menu mnemonicParsing="false" text="O nás">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#oNas" text="O nás" />
+                     </items></Menu>
                </menus>
             </MenuBar>
       </children>

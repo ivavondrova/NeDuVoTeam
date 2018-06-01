@@ -1,7 +1,13 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
 import javafx.scene.control.MenuBar;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
 public class zamestnanciSprava {
@@ -17,4 +23,37 @@ public class zamestnanciSprava {
         alert.showAndWait();
 	}
 
+	public void vytvorit_ucet(ActionEvent event) throws Exception{
+		Stage primaryStage = new Stage();
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass()
+		          .getResource
+		          ("/zamestnanec_vytvoritUcet.fxml"));
+		Parent root = loader.load();
+		zamestnanecTvorbaUctu controller = loader.getController();
+		
+      primaryStage.setTitle("Rezervace");
+      primaryStage.setScene(new Scene(root));
+      primaryStage.show();
+		
+	}
+	
+	public void upravit_ucet(ActionEvent event) throws Exception{
+		Stage primaryStage = new Stage();
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass()
+		          .getResource
+		          ("/zamestnanec_zmenaOU.fxml"));
+		Parent root = loader.load();
+		zamZmenaOU controller = loader.getController();
+		
+      primaryStage.setTitle("Rezervace");
+      primaryStage.setScene(new Scene(root));
+      primaryStage.show();
+		
+	}
+	
+	public void smazat_ucet( ) {
+		
+	}
 }

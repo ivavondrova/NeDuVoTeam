@@ -3,13 +3,14 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.WelcomeScreen">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.WelcomeScreen">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -30,7 +31,10 @@
             </Button>
           <MenuBar fx:id="menu" layoutX="-10.0" prefHeight="29.0" prefWidth="650.0">
             <menus>
-               <Menu mnemonicParsing="false" onAction="#oNas" text="O nás" />
+               <Menu mnemonicParsing="false" text="O nás">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#oNas" text="O nás" />
+                     </items></Menu>
             </menus>
           </MenuBar>
       </children>
