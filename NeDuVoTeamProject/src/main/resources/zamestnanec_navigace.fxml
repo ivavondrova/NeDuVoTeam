@@ -33,7 +33,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-          <MenuBar layoutX="-10.0" prefHeight="29.0" prefWidth="650.0">
+          <MenuBar fx:id="menu" layoutX="-10.0" prefHeight="29.0" prefWidth="650.0">
             <menus>
                <Menu mnemonicParsing="false" onAction=#oNas" text="O nás" />
             </menus>

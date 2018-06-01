@@ -2,7 +2,7 @@ package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
 import javafx.scene.control.MenuBar;
 
-public class zam_navigation {
+public class zmenitInformaceSportoviste {
 	
 	@FXML private MenuBar menu;
 	

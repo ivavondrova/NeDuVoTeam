@@ -22,7 +22,7 @@
 
 <VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.RezervationScreen">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
+    <MenuBar fx:id="menu" VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="Rezervace">
           <items>
@@ -31,7 +31,7 @@
           </items>
         </Menu>
         <Menu mnemonicParsing="false" onAction="#cenik" text="Ceník" />
-        <Menu mnemonicParsing="false" onAction=#oNas" text="O nás" />
+        <Menu mnemonicParsing="false" onAction="#oNas" text="O nás" />
       </menus>
     </MenuBar>
     <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">

@@ -15,9 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="513.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="513.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zamestnanecTvorbaUctu">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
+    <MenuBar fx:id="menu" VBox.vgrow="NEVER">
       <menus>
          <Menu mnemonicParsing="false" onAction=#oNas" text="O nás" />
       </menus>

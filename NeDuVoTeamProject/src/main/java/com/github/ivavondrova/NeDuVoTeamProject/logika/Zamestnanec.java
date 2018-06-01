@@ -1,22 +1,21 @@
 package com.github.ivavondrova.NeDuVoTeamProject.logika;
 
 /*******************************************************************************
- * Třída osobaSPristupem slouží ke správě zaměstnanců.
+ * Třída Zamestnanec slouží ke správě zaměstnanců.
  *
  * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
  * @version    LS 2017/2018 
  */
 
-public class osobaSPristupem{
+public class Zamestnanec
 
+{
 	private String jmeno;
 	private String prijmeni;
 	private String uzivatelske_jmeno;
 	private String heslo;
 	private int telefon;
 	private String mail;
-	private boolean zam = true;
-	private boolean admin = false;
 
 	/**
 	    * Konstruktor pro vytvoření osoby s přístupem (zaměstnance, admina)
@@ -27,11 +26,9 @@ public class osobaSPristupem{
 	    * @param heslo	 			heslo zaměstnance
 	    * @param telefon				telefon zaměstnance
 	    * @param mail				mail zaměstnance
-	    * @param zam					přístupové právo "zam", defaultně nastaveno na "true"
-	    * @param admin				přístupové právo "admin", defaultně nastaveno na "false"
 	    */
 	
-		public osobaSPristupem (String jmeno, String prijmeni, String uzivatelske_jmeno, String heslo, int telefon, int mail, boolean zam, boolean admin) 
+		public Zamestnanec (String jmeno, String prijmeni, String uzivatelske_jmeno, String heslo, int telefon, int mail) 
 		{
 			this.jmeno = jmeno;
 			this.prijmeni = prijmeni;
@@ -39,8 +36,6 @@ public class osobaSPristupem{
 			this.heslo = heslo;
 			this.telefon = telefon;
 			this.mail = mail;
-			this.zam = zam;
-			this.admin = admin;
 		}
 		
 		/**
@@ -85,31 +80,7 @@ public class osobaSPristupem{
 			return mail;
 		}
 		
-		/**
-		 * Metoda zjišťuje nastavení přístupových práv.
-		 * 
-		 * @param	zam
-		 * @return	vrací nastavení přístupového práva "zam" - "true" znamená, že uživatel je zaměstnanec, "false" není
-		 * 
-		 * 
-		 * @param	admin
-		 * @return	vrací nastavení přístupového práva "admin" - "true" znamená, že uživatel je admin, "false" není
-		 * 
-		 *
-		 */
-		
-		
-		public boolean isZam() 
-		{
-			return zam;
-		}
-		
-		public boolean isAdmin() 
-		{
-			return admin;
-		}
-		
-		
+
 		/**
 		 * Metoda set nastaví příslušnou hodnotu.
 		 * 
@@ -119,8 +90,6 @@ public class osobaSPristupem{
 		 * setHeslo					@return 		nastaví heslo zaměstnance
 		 * setTelefon				@return 		nastaví telefon zaměstnance
 		 * setMail					@return 		nastaví mail zaměstnance
-		 * setZam					@return		nastaví přístupová práva "zam"
-		 * setAdmin					@return		nastaví přístupová práva "admin"
 		 * 
 		 */
 		
@@ -154,14 +123,5 @@ public class osobaSPristupem{
 			this.mail = mail;
 		}
 		
-		public void setZam(boolean zam) 
-		{
-			this.zam = zam;
-		}
-		
-		public void setAdmin(boolean admin) 
-		{
-			this.admin = admin;
-		}
 
 }

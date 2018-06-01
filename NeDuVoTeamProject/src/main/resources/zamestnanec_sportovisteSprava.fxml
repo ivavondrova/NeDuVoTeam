@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.sportovisteSprava">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -40,7 +40,7 @@
                   <Font size="18.0" fx:id="x1" />
                </font>
             </Label>
-            <MenuBar layoutX="1.0" layoutY="1.0" prefHeight="29.0" prefWidth="646.0">
+            <MenuBar fx:id="menu" layoutX="1.0" layoutY="1.0" prefHeight="29.0" prefWidth="646.0">
                <menus>
                    <Menu mnemonicParsing="false" onAction=#oNas" text="O nás" />
                </menus>

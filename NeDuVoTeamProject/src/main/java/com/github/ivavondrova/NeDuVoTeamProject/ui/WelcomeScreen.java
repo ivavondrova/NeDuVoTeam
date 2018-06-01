@@ -9,12 +9,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.scene.control.MenuBar;
 
 public class WelcomeScreen {
 	
 	@FXML private Button rezervace;
 	@FXML private Button zamestnanci;
 	@FXML private Button sportoviste;
+	@FXML private MenuBar menu;
 	
 	public void prepnirezervace(ActionEvent event) throws Exception{
 		((Node)event.getSource()).getScene().getWindow().hide();
@@ -44,5 +46,13 @@ public class WelcomeScreen {
       primaryStage.setTitle("Rezervace");
       primaryStage.setScene(new Scene(root));
       primaryStage.show();
+	}
+	
+	public void oNas() {
+		Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Zahraj si");
+        alert.setHeaderText("Zahraj si \n4IT115 - Týmová semestrální práce");
+        alert.setContentText("Vladimír Dušek, Petr Netolický, Iva Vondrová \nLS 2017/2018 \nFIS VŠE v Praze");
+        alert.showAndWait();
 	}
 }
