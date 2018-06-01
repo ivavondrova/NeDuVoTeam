@@ -19,7 +19,7 @@
   <children>
     <MenuBar fx:id="menu" VBox.vgrow="NEVER">
       <menus>
-         <Menu mnemonicParsing="false" onAction=#oNas" text="O nás" />
+         <Menu mnemonicParsing="false" onAction="#oNas" text="O nás" />
       </menus>
     </MenuBar>
     <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">

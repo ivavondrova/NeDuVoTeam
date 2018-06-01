@@ -35,7 +35,7 @@
             </Button>
           <MenuBar fx:id="menu" layoutX="-10.0" prefHeight="29.0" prefWidth="650.0">
             <menus>
-               <Menu mnemonicParsing="false" onAction=#oNas" text="O nás" />
+               <Menu mnemonicParsing="false" onAction="#oNas" text="O nás" />
             </menus>
           </MenuBar>
       </children>
