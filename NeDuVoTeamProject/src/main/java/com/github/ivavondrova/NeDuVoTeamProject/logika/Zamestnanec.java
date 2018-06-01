@@ -28,7 +28,7 @@ public class Zamestnanec
 	    * @param mail				mail zaměstnance
 	    */
 	
-		public Zamestnanec (String jmeno, String prijmeni, String uzivatelske_jmeno, String heslo, int telefon, int mail) 
+		public Zamestnanec (String jmeno, String prijmeni, String uzivatelske_jmeno, String heslo, int telefon, String mail) 
 		{
 			this.jmeno = jmeno;
 			this.prijmeni = prijmeni;

@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.Alert;
 
 public class WelcomeScreen {
 	
@@ -17,6 +18,7 @@ public class WelcomeScreen {
 	@FXML private Button zamestnanci;
 	@FXML private Button sportoviste;
 	@FXML private MenuBar menu;
+
 	
 	public void prepnirezervace(ActionEvent event) throws Exception{
 		((Node)event.getSource()).getScene().getWindow().hide();

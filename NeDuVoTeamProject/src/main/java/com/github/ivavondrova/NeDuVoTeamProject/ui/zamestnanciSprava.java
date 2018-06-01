@@ -1,10 +1,13 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
 import javafx.scene.control.MenuBar;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 
 public class zamestnanciSprava {
 	
 	@FXML private MenuBar menu;
+	
 	
 	public void oNas() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);

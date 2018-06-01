@@ -25,10 +25,11 @@ public class Rezervace {
 	    * @param id				id rezervace, bude generované automaticky
 	    * @param datum			datum rezervace
 	    * @param hodinaRezervace	hodina, od které bude probíhat rezervace
+	 * @return 
 	    * 
 	    */
 	
-		public Zakaznik (String jmeno, int telefon, String mail, int id, String datum, String hodinaRezervace) 
+		public Rezervace (String jmeno, int telefon, String mail, int id, String datum, String hodinaRezervace) 
 		{
 			this.jmeno = jmeno;
 			this.telefon = telefon;

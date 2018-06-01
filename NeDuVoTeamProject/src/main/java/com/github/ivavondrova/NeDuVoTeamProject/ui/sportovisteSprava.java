@@ -1,6 +1,8 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
 import javafx.scene.control.MenuBar;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 
 public class sportovisteSprava {
 	
