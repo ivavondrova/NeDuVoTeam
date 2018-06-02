@@ -14,6 +14,7 @@ import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 
 public class zamZmenaOU {
@@ -29,13 +30,14 @@ public class zamZmenaOU {
 	Connection connection;
 	PreparedStatement preparedStatement=null;
 	ResultSet rs=null;
+	public static String n = null;
 	
 	 public void editace(ActionEvent event) {
 		 connection = sqliteConnection.dbConnector();
 			if (connection==null)System.exit(1);
 		
 		 try {
-			String query="Update Zamestnanec set prijmeni='"+prijmeni.getText()+ "' ,jmeno='"+jmeno.getText()+"' ,heslo='"+heslo.getText()+"' ,telefon='"+telefon.getText()+"' ,mail='"+mail.getText()+"' where uzivatelske.jmeno='"+n.vstup+"' "; 
+			String query="Update Zamestnanec set prijmeni='"+prijmeni.getText()+ "' ,jmeno='"+jmeno.getText()+"' ,heslo='"+heslo.getText()+"' ,telefon='"+telefon.getText()+"' ,mail='"+mail.getText()+"' where uzivatelske_jmeno='"+n+"' "; 
 					PreparedStatement pst=connection.prepareStatement(query);
 					
 					
@@ -43,6 +45,7 @@ public class zamZmenaOU {
 					
 					JOptionPane.showMessageDialog(null, "Data byla aktualizována");
 					pst.close();
+					((Node)event.getSource()).getScene().getWindow().hide();
 					
 					
 		} catch (SQLException e) {

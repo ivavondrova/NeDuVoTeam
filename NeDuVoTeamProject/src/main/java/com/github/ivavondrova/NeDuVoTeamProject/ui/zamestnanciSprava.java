@@ -20,6 +20,7 @@ import javax.swing.JOptionPane;
 import java.sql.*;
 import com.github.ivavondrova.NeDuVoTeamProject.logika.Zamestnanec;
 import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
+import com.github.ivavondrova.NeDuVoTeamProject.ui.zamZmenaOU;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -52,7 +53,7 @@ public class zamestnanciSprava implements Initializable {
 	Connection connection;
 	PreparedStatement preparedStatement=null;
 	ResultSet rs=null;
-	public String n = null;
+	
 	
 	public void vypsat(ActionEvent event) {
 		 
@@ -140,7 +141,7 @@ public class zamestnanciSprava implements Initializable {
 	}
 	
 	public void upravit_ucet(ActionEvent event) throws Exception{
-		n = vstup.getText()+"' ";
+		zamZmenaOU.n = vstup.getText();
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass()
