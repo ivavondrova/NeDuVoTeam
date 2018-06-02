@@ -10,11 +10,12 @@ package com.github.ivavondrova.NeDuVoTeamProject.logika;
 public class Zamestnanec
 
 {
+
 	private String jmeno;
 	private String prijmeni;
 	private String uzivatelske_jmeno;
 	private String heslo;
-	private int telefon;
+	private String telefon;
 	private String mail;
 
 	/**
@@ -28,8 +29,9 @@ public class Zamestnanec
 	    * @param mail				mail zaměstnance
 	    */
 	
-		public Zamestnanec (String jmeno, String prijmeni, String uzivatelske_jmeno, String heslo, int telefon, String mail) 
+		public Zamestnanec (String jmeno, String prijmeni, String uzivatelske_jmeno, String heslo, String telefon, String mail) 
 		{
+			
 			this.jmeno = jmeno;
 			this.prijmeni = prijmeni;
 			this.uzivatelske_jmeno = uzivatelske_jmeno;
@@ -70,10 +72,11 @@ public class Zamestnanec
 			return heslo;
 		}
 		
-		public int getTelefon() 
+		public String getTelefon() 
 		{
 			return telefon;
 		}
+		
 		
 		public String getMail() 
 		{
@@ -113,7 +116,7 @@ public class Zamestnanec
 			this.heslo = heslo;
 		}
 		
-		public void setTelefon(int telefon) 
+		public void setTelefon(String telefon) 
 		{
 			this.telefon = telefon;
 		}

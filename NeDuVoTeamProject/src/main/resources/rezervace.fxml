@@ -20,7 +20,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.RezervationScreen">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.RezervationScreen">
   <children>
     <MenuBar fx:id="menu" VBox.vgrow="NEVER">
       <menus>
@@ -31,7 +31,10 @@
           </items>
         </Menu>
         <Menu mnemonicParsing="false" onAction="#cenik" text="Ceník" />
-        <Menu mnemonicParsing="false" onAction="#oNas" text="O nás" />
+        <Menu mnemonicParsing="false" text="O nás">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#oNas" text="O nás" />
+               </items></Menu>
       </menus>
     </MenuBar>
     <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
