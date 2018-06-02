@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="489.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zamZmenaOU">
+<VBox prefHeight="489.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zamZmenaOU">
   <children>
     <MenuBar fx:id="menu" VBox.vgrow="NEVER">
       <menus>
@@ -37,8 +37,8 @@
                               <Image url="@Sportoviště%201.jpg" />
                            </image>
                         </ImageView>
-                        <TextField layoutX="223.0" layoutY="65.0" prefHeight="27.0" prefWidth="288.0" />
-                        <Button layoutX="400.0" layoutY="348.0" mnemonicParsing="false" text="Dokončit" />
+                        <TextField fx:id="jmeno" layoutX="223.0" layoutY="65.0" prefHeight="27.0" prefWidth="288.0" />
+                        <Button layoutX="400.0" layoutY="348.0" mnemonicParsing="false" onAction="#editace" text="Dokončit" />
                 <Label alignment="CENTER" layoutX="14.0" layoutY="23.0" style="&#10;" text="Změna osobních údajů" textAlignment="CENTER" textFill="#9a4d12" wrapText="false">
                            <font>
                       <Font size="18.0" fx:id="x1" />
@@ -46,12 +46,12 @@
                         <Label layoutX="15.0" layoutY="70.0" text="Jméno" />
                         <Label layoutX="15.0" layoutY="115.0" text="Příjmení" />
                         <Label layoutX="15.0" layoutY="254.0" text="E-mail" />
-                        <TextField layoutX="223.0" layoutY="110.0" prefHeight="29.0" prefWidth="288.0" />
-                        <TextField layoutX="223.0" layoutY="254.0" prefHeight="25.0" prefWidth="288.0" />
-                        <TextField layoutX="223.0" layoutY="199.0" prefHeight="29.0" prefWidth="288.0" />
+                        <TextField fx:id="prijmeni" layoutX="223.0" layoutY="110.0" prefHeight="29.0" prefWidth="288.0" />
+                        <TextField fx:id="mail" layoutX="223.0" layoutY="254.0" prefHeight="25.0" prefWidth="288.0" />
+                        <TextField fx:id="telefon" layoutX="223.0" layoutY="199.0" prefHeight="29.0" prefWidth="288.0" />
                         <Label layoutX="17.0" layoutY="205.0" text="Telefon" />
                         <Label layoutX="18.0" layoutY="160.0" text="Heslo" />
-                        <TextField layoutX="223.0" layoutY="156.0" prefHeight="25.0" prefWidth="288.0" />
+                        <TextField fx:id="heslo" layoutX="223.0" layoutY="156.0" prefHeight="25.0" prefWidth="288.0" />
               </children>
             </AnchorPane>
           </content>

@@ -52,6 +52,7 @@ public class zamestnanciSprava implements Initializable {
 	Connection connection;
 	PreparedStatement preparedStatement=null;
 	ResultSet rs=null;
+	public String n = null;
 	
 	public void vypsat(ActionEvent event) {
 		 
@@ -111,7 +112,8 @@ public class zamestnanciSprava implements Initializable {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			 
+		 
+		 
 		 
 	 }
 	public void oNas() {
@@ -138,6 +140,7 @@ public class zamestnanciSprava implements Initializable {
 	}
 	
 	public void upravit_ucet(ActionEvent event) throws Exception{
+		n = vstup.getText()+"' ";
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass()
