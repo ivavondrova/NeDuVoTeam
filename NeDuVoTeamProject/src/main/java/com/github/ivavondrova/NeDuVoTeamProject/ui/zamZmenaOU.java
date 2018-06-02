@@ -32,6 +32,10 @@ public class zamZmenaOU {
 	ResultSet rs=null;
 	public static String n = null;
 	
+	/**
+	 * Metoda, díky které se upravují informace o zaměstnancích.
+	 */
+	
 	 public void editace(ActionEvent event) {
 		 connection = sqliteConnection.dbConnector();
 			if (connection==null)System.exit(1);
@@ -55,6 +59,10 @@ public class zamZmenaOU {
 		}
 	}
 	
+	 	/**
+		 * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
+		 */
+	 
 	 public void oNas() {
 			Alert alert = new Alert(Alert.AlertType.INFORMATION);
 	        alert.setTitle("Zahraj si");

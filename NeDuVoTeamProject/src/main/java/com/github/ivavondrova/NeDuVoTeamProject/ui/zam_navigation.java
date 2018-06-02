@@ -14,6 +14,10 @@ public class zam_navigation {
 	
 	@FXML private MenuBar menu;
 	
+	/**
+	 * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
+	 */
+	
 	public void oNas() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Zahraj si");
@@ -21,6 +25,10 @@ public class zam_navigation {
         alert.setContentText("Vladimír Dušek, Petr Netolický, Iva Vondrová \nLS 2017/2018 \nFIS VŠE v Praze");
         alert.showAndWait();
 	}
+	
+	/**
+	 * Metoda, která při volbě "Zaměstnanci" otevře příslušné okno "Správa zaměstnanců".
+	 */
 	
 	public void prepnout_zamestnanci(ActionEvent event) throws Exception{
 		((Node)event.getSource()).getScene().getWindow().hide();
@@ -38,6 +46,10 @@ public class zam_navigation {
 		
 	}
 	
+	/**
+	 * Metoda, která při volbě "Sportoviště" otevře okno "Správa sportoviště".
+	 */
+	
 	public void prepnout_sportoviste(ActionEvent event) throws Exception{
 		((Node)event.getSource()).getScene().getWindow().hide();
 		Stage primaryStage = new Stage();
@@ -54,6 +66,10 @@ public class zam_navigation {
 		
 	}
 
+	/**
+	 * Metoda, která při volbě "Rezervace" otevře okno "Správa rezervací".
+	 */
+	
 	public void prepnout_rezervace(ActionEvent event) throws Exception{
 		((Node)event.getSource()).getScene().getWindow().hide();
 		Stage primaryStage = new Stage();

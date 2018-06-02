@@ -25,7 +25,7 @@ public class Main extends Application{
 		Parent root = loader.load();
 		WelcomeScreen controller = loader.getController();
 		
-        primaryStage.setTitle("Rezervace");
+        primaryStage.setTitle("Zahraj si");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 		

@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zmenitInformaceSportoviste">
+<VBox maxHeight="609.0" maxWidth="922.0" prefHeight="609.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zmenitInformaceSportoviste">
   <children>
     <MenuBar fx:id="menu" VBox.vgrow="NEVER">
       <menus>
@@ -26,43 +26,46 @@
                </items></Menu>
       </menus>
     </MenuBar>
-    <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane focusTraversable="true" maxHeight="600.0" maxWidth="900.0" prefHeight="593.0" prefWidth="686.0" VBox.vgrow="ALWAYS">
       <items>
-        <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+        <ScrollPane maxWidth="900.0" prefHeight="563.0" prefWidth="732.0">
           <content>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="639.0">
               <children>
-                        <ImageView fitHeight="696.0" fitWidth="1112.0" layoutX="-32.0" layoutY="-29.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="607.0" fitWidth="975.0" layoutX="-78.0" layoutY="-36.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Sportoviště%201.jpg" />
                            </image>
                         </ImageView>
-                        <TextField layoutX="223.0" layoutY="65.0" prefHeight="27.0" prefWidth="288.0" />
-                        <Button layoutX="566.0" layoutY="495.0" mnemonicParsing="false" text="Dokončit" />
-                <Label alignment="CENTER" layoutX="14.0" layoutY="23.0" style="&#10;" text="Změnit informace o sportovišti" textAlignment="CENTER" textFill="#9a4d12" wrapText="false">
+                         <Label alignment="CENTER" layoutX="14.0" layoutY="23.0" style="&#10;" text="Změnit informace o sportovišti" textAlignment="CENTER" textFill="#9a4d12" wrapText="false">
                            <font>
-                      <Font size="18.0" fx:id="x1" />
+                      		<Font size="18.0" fx:id="x1" />
                            </font></Label>
+                        	<TextField fx:id="nazev" layoutX="223.0" layoutY="65.0" prefHeight="27.0" prefWidth="288.0" />
+                         <TextField fx:id="popis" layoutX="223.0" layoutY="110.0" prefHeight="61.0" prefWidth="288.0" />
+                        	<TextField fx:id="adresa" layoutX="224.0" layoutY="187.0" prefHeight="71.0" prefWidth="288.0" />
+                        	<TextField fx:id="kapacita" layoutX="223.0" layoutY="270.0" prefHeight="27.0" prefWidth="288.0" />
+                        	 <TextField fx:id="cena" layoutX="223.0" layoutY="334.0" prefHeight="27.0" prefWidth="150.0" />
+                        	  <TextField fx:id="otevreno_od" layoutX="227.0" layoutY="405.0" prefHeight="27.0" prefWidth="80.0" />
+                        	  <TextField fx:id="otevreno_do" layoutX="227.0" layoutY="443.0" prefHeight="27.0" prefWidth="80.0" />
                         <Label layoutX="15.0" layoutY="70.0" text="Název sportoviště" />
-                        <Label layoutX="12.0" layoutY="275.0" text="Maximální kapacita" />
-                        <TextField layoutX="223.0" layoutY="270.0" prefHeight="27.0" prefWidth="288.0" />
-                        <Label layoutX="15.0" layoutY="115.0" text="Popis" />
+                         <Label layoutX="15.0" layoutY="115.0" text="Popis" />
                         <Label layoutX="14.0" layoutY="187.0" text="Adresa" />
-                        <TextField layoutX="223.0" layoutY="110.0" prefHeight="61.0" prefWidth="288.0" />
-                        <TextField layoutX="224.0" layoutY="187.0" prefHeight="71.0" prefWidth="288.0" />
+                        <Label layoutX="12.0" layoutY="275.0" text="Maximální kapacita" />         
                         <Label layoutX="10.0" layoutY="339.0" text="Cena za hod." />
                         <Label layoutX="18.0" layoutY="410.0" text="Otevřeno od" />
                         <Label layoutX="18.0" layoutY="448.0" text="Otevřeno do" />
-                        <TextField layoutX="223.0" layoutY="334.0" prefHeight="27.0" prefWidth="150.0" />
-                        <TextField layoutX="227.0" layoutY="443.0" prefHeight="27.0" prefWidth="80.0" />
-                        <TextField layoutX="227.0" layoutY="405.0" prefHeight="27.0" prefWidth="80.0" />
+                        <Button layoutX="566.0" layoutY="495.0" mnemonicParsing="false" onAction="#editace_sportoviste" text="Dokončit" />
+                       
+                        
+                       
               </children>
             </AnchorPane>
           </content>
         </ScrollPane>
       </items>
     </SplitPane>
-    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+    <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="900.0" spacing="5.0" VBox.vgrow="NEVER">
       <padding>
         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
       </padding>

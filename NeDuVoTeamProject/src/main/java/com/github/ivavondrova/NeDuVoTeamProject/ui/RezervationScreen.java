@@ -8,6 +8,10 @@ public class RezervationScreen {
 	
 	@FXML private MenuBar menu;
 	
+	/**
+	 * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
+	 */
+	
 	public void oNas() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Zahraj si");

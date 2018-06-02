@@ -31,6 +31,10 @@ public class zamestnanecTvorbaUctu {
 	PreparedStatement preparedStatement=null;
 	ResultSet rs=null;
 	
+	/**
+	 * Metoda, která po vyplnění příslušných údajů vytvoří nového zaměstnance.
+	 */
+	
 	public void vytvorit(ActionEvent event) throws Exception {
 		 connection = sqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
@@ -57,6 +61,10 @@ public class zamestnanecTvorbaUctu {
 	e.printStackTrace();
 }
 }
+	
+	/**
+	 * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
+	 */
 	
 	public void oNas() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);

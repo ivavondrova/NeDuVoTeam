@@ -29,8 +29,8 @@
                </image>
             </ImageView>
             <TextField fx:id="txtUsername" alignment="CENTER" layoutX="204.0" layoutY="199.0" prefHeight="27.0" prefWidth="271.0" promptText="Uživatelské jméno" />
+            <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="237.0" layoutY="254.0" prefHeight="25.0" prefWidth="202.0" promptText="Heslo" />
             <Button fx:id="logIn" layoutX="285.0" layoutY="325.0" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="130.0" text="Přihlásit" />
-            <PasswordField fx:id="txtPassword" alignment="CENTER" layoutX="237.0" layoutY="254.0" prefHeight="25.0" prefWidth="202.0" promptText="heslo" />
       </children>
     </AnchorPane>
   </children>

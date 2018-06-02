@@ -38,6 +38,10 @@ import javafx.scene.control.Alert;
 
 
 
+/**
+ * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
+ */
+
 public class zamestnanciSprava implements Initializable {
 	ObservableList<com.github.ivavondrova.NeDuVoTeamProject.logika.Zamestnanec> data=FXCollections.observableArrayList();
 	@FXML private MenuBar menu;
@@ -54,6 +58,9 @@ public class zamestnanciSprava implements Initializable {
 	PreparedStatement preparedStatement=null;
 	ResultSet rs=null;
 	
+	/**
+	 * Metoda, která vypíše všechny zaměstnance do tabulky.
+	 */
 	
 	public void vypsat(ActionEvent event) {
 		 
@@ -61,7 +68,6 @@ public class zamestnanciSprava implements Initializable {
 		 connection = sqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		
-	
 	 try {
 		
 		 jmeno.setCellValueFactory(new PropertyValueFactory<>("jmeno"));
@@ -95,6 +101,11 @@ public class zamestnanciSprava implements Initializable {
 	 System.err.println(e);
 	 }		
 	 }  
+	
+	/**
+	 * Metoda, která smaže příslušného zaměstnance.
+	 */
+	
 	 public void smazat_ucet(ActionEvent event) {
 		 connection = sqliteConnection.dbConnector();
 			if (connection==null)System.exit(1);
@@ -113,10 +124,12 @@ public class zamestnanciSprava implements Initializable {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		 
-		 
-		 
 	 }
+	 
+	 	/**
+		 * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
+		 */
+	 
 	public void oNas() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Zahraj si");
@@ -125,6 +138,10 @@ public class zamestnanciSprava implements Initializable {
         alert.showAndWait();
 	}
 
+	/**
+	 * Metoda, která při volbě "vytvořit" otevře příslušné okno "Vytvořit nový účet".
+	 */
+	
 	public void vytvorit_ucet(ActionEvent event) throws Exception{
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader();
@@ -134,11 +151,15 @@ public class zamestnanciSprava implements Initializable {
 		Parent root = loader.load();
 		zamestnanecTvorbaUctu controller = loader.getController();
 		
-      primaryStage.setTitle("Rezervace");
+      primaryStage.setTitle("Vytvořit nový účet");
       primaryStage.setScene(new Scene(root));
       primaryStage.show();
 		
 	}
+	
+	/**
+	 * Metoda, která při volbě "upravit" otevře příslušné okno "Upravit stávající účet".
+	 */
 	
 	public void upravit_ucet(ActionEvent event) throws Exception{
 		zamZmenaOU.n = vstup.getText();
@@ -150,15 +171,12 @@ public class zamestnanciSprava implements Initializable {
 		Parent root = loader.load();
 		zamZmenaOU controller = loader.getController();
 		
-      primaryStage.setTitle("Rezervace");
+      primaryStage.setTitle("Upravit stávající účet");
       primaryStage.setScene(new Scene(root));
       primaryStage.show();
 		
 	}
 	
-	public void smazat_ucet( ) {
-		
-	}
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		

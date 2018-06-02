@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 import com.github.ivavondrova.NeDuVoTeamProject.logika.LoginModel;
 
-import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -42,7 +42,12 @@ public class LoginController implements Initializable{
 	    	 
 	    	 }
 	     }
-	    	 public void Login (ActionEvent event) throws Exception{
+	     
+	     /**
+ 		 * Metoda, která při správním přihlášení otevírá nové okno.
+ 		 */
+	     
+	    	 public void Login (Event event) throws Exception{
 	    		 try {
 					if(loginModel.isLogin(txtUsername.getText(), txtPassword.getText())) {
 						prihlaseniS();
@@ -55,7 +60,7 @@ public class LoginController implements Initializable{
 						Parent root = loader.load();
 						zam_navigation controller = loader.getController();
 						
-				      primaryStage.setTitle("Rezervace");
+				      primaryStage.setTitle("Zaměstnanci - hlavní menu");
 				      primaryStage.setScene(new Scene(root));
 				      primaryStage.show();
 					} else {
@@ -69,6 +74,10 @@ public class LoginController implements Initializable{
 	
 
 }
+	    	 	/**
+	    		 * Metoda, která nastavuje vyskakovací okno s informacemi o připojení databáze.
+	    		 */
+	    	 
 	    		public void databaseCon() {
 	    			Alert alert = new Alert(Alert.AlertType.INFORMATION);
 	    	        alert.setTitle("Databáze");
@@ -76,6 +85,10 @@ public class LoginController implements Initializable{
 	    	        alert.setContentText("Databáze je úspěšně připojena k programu.");
 	    	        alert.showAndWait();
 	    		}
+	    		
+	    		/**
+	    		 * Metoda, která nastavuje vyskakovací okno s informacemi o připojení databáze.
+	    		 */
 	    		
 	    		public void databaseDiscon() {
 	    			Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -85,12 +98,20 @@ public class LoginController implements Initializable{
 	    	        alert.showAndWait();
 	    		}
 	    		
+	    		/**
+	    		 * Metoda, která nastavuje vyskakovací okno s informacemi o úspěšném přihlášení.
+	    		 */
+	    		
 	    		public void prihlaseniS() {
 	    			Alert alert = new Alert(Alert.AlertType.INFORMATION);
 	    	        alert.setTitle("Přihlášení");
 	    	        alert.setHeaderText("Přihlášení proběhlo úspěšně");
 	    	        alert.showAndWait();
 	    		}
+	    		
+	    		/**
+	    		 * Metoda, která nastavuje vyskakovací okno s informacemi o neúspěšném přihlášení.
+	    		 */
 	    		
 	    		public void prihlaseniF() {
 	    			Alert alert = new Alert(Alert.AlertType.ERROR);

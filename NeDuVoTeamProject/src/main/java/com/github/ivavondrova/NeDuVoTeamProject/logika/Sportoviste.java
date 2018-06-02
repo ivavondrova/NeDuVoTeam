@@ -29,15 +29,15 @@ public class Sportoviste {
 	    * @param otevreno_od		časový pdaj o době provozu sportoviště
 	    * 
 	    */
-		public Sportoviste (String nazev, String popis, String adresa, int kapacita, int cena, int otevreno_do, int otevreno_od) 
+		public Sportoviste (String nazev, String popis, String adresa, int kapacita, int cena, int otevreno_od, int otevreno_do) 
 		{
 			this.nazev = nazev;
 			this.popis = popis;
 			this.adresa = adresa;
 			this.kapacita = kapacita;
 			this.cena = cena;
-			this.otevreno_do = otevreno_do;
 			this.otevreno_od = otevreno_od;
+			this.otevreno_do = otevreno_do;
 		}
 		
 		/**

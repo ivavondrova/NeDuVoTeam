@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.control.MenuBar;
+import javafx.scene.input.KeyCode;
 import javafx.scene.control.Alert;
 
 public class WelcomeScreen {
@@ -18,7 +19,10 @@ public class WelcomeScreen {
 	@FXML private Button zamestnanci;
 	@FXML private Button sportoviste;
 	@FXML private MenuBar menu;
-
+	
+	/**
+	 * Metoda, která při volbě "Rezervace" otevře příslušné okno "Rezervace".
+	 */
 	
 	public void prepnirezervace(ActionEvent event) throws Exception{
 		((Node)event.getSource()).getScene().getWindow().hide();
@@ -35,6 +39,10 @@ public class WelcomeScreen {
       primaryStage.show();
 	}
 	
+	/**
+	 * Metoda, která při volbě "Zaměstnanec" otevře příslušné okno "Přihlášení".
+	 */
+	
 	public void prepnizamestnanci(ActionEvent event) throws Exception{
 		((Node)event.getSource()).getScene().getWindow().hide();
 		Stage primaryStage = new Stage();
@@ -44,11 +52,17 @@ public class WelcomeScreen {
 		          ("/zamestnanec_prihlaseni.fxml"));
 		Parent root = loader.load();
 		LoginController controller = loader.getController();
+		Scene scene = new Scene(root);
 		
-      primaryStage.setTitle("Rezervace");
-      primaryStage.setScene(new Scene(root));
+		
+      primaryStage.setTitle("Přihlášení");
+      primaryStage.setScene(scene);
       primaryStage.show();
 	}
+	
+	/**
+	 * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
+	 */
 	
 	public void oNas() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -57,4 +71,8 @@ public class WelcomeScreen {
         alert.setContentText("Vladimír Dušek, Petr Netolický, Iva Vondrová \nLS 2017/2018 \nFIS VŠE v Praze");
         alert.showAndWait();
 	}
-}
+	
+}	    
+	  
+
+
