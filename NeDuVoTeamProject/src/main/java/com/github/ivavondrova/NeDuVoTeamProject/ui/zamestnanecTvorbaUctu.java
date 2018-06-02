@@ -15,6 +15,7 @@ import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 
 public class zamestnanecTvorbaUctu {
@@ -30,7 +31,7 @@ public class zamestnanecTvorbaUctu {
 	PreparedStatement preparedStatement=null;
 	ResultSet rs=null;
 	
-	public void vytvorit(ActionEvent event) {
+	public void vytvorit(ActionEvent event) throws Exception {
 		 connection = sqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		
@@ -47,6 +48,7 @@ public class zamestnanecTvorbaUctu {
 			
 			JOptionPane.showMessageDialog(null, "Zaměstnanec vytvořen");
 			pst.close();
+			((Node)event.getSource()).getScene().getWindow().hide();
 			
 			
 } catch (SQLException e) {

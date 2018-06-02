@@ -14,6 +14,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import javax.swing.JOptionPane;
+
 import java.sql.*;
 import com.github.ivavondrova.NeDuVoTeamProject.logika.Zamestnanec;
 import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
@@ -44,12 +47,13 @@ public class zamestnanciSprava implements Initializable {
 	@FXML private TableColumn<?, ?> heslo;
 	@FXML private TableColumn<?, ?> telefon;
 	@FXML private TableColumn<?, ?> mail;
+	@FXML private TextField vstup;
 		
 	Connection connection;
 	PreparedStatement preparedStatement=null;
 	ResultSet rs=null;
 	
-	public void smazat_ucet(ActionEvent event) {
+	public void vypsat(ActionEvent event) {
 		 
 		 vypis.getItems().clear();
 		 connection = sqliteConnection.dbConnector();
@@ -87,8 +91,28 @@ public class zamestnanciSprava implements Initializable {
 	 catch (SQLException e) 
 	 { 
 	 System.err.println(e);
-			
+	 }		
 	 }  
+	 public void smazat_ucet(ActionEvent event) {
+		 connection = sqliteConnection.dbConnector();
+			if (connection==null)System.exit(1);
+		
+		 try {
+			String query="delete from Zamestnanec where uzivatelske_jmeno='"+vstup.getText()+"' ";
+					PreparedStatement pst=connection.prepareStatement(query);
+					
+					
+					pst.execute();
+					
+				JOptionPane.showMessageDialog(null, "Uživatel smazán");
+					pst.close();
+		 } catch (SQLException e) {
+				
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			 
+		 
 	 }
 	public void oNas() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
