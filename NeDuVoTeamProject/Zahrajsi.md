@@ -37,28 +37,27 @@ Aplikace slouží jako rezervační systém pro multifunkční sportoviště. Z�
 ### Diagramy
 
 1. Class Diagram:
-![Class Diagram](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/Class%20Diagram.png)
+![Class Diagram](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Diagramy/Class%20Diagram.png?raw=true)
 
 2. UseCase Diagram:
-![UseCase Diagram](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/UseCase%20Diagram.png)
-
+![UseCase Diagram](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Diagramy/UseCase%20Diagram.png?raw=true)
 
 Use Case Specifikaci můžete najít na následujícím odkazu: [Use Case Specifikace](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Use%20Cases%20specification.docx). (Dokument je nutné si stáhnout.)
 
 ### Návrhy obrazovek
 
 **1. Návrh obrazovky *"Vytvoření rezervace"*:**
-![Návrh obrazovky "vytvoření rezervace"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/Návrh1.png)
+![Návrh obrazovky "vytvoření rezervace"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Návrh%20obrazovek/Návrh1.png?raw=true)
 
 **Popis**: Zákazník si vybere sportoviště, které chce rezervovat, podle dostupnosti se mu zobrazí možné dny a časy. V pravé horní části obrazovky se mu zobrazí shrnutí jeho objednávky. Pro dokončení rezervace vyplní své kontaktní údaje a klikne na tlačítko "Dokončit".
 
 **2. Návrh obrazovky *"Hlavní menu"*:**
-![Návrh obrazovky "hlavní menu"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/Návrh2.png)
+![Návrh obrazovky "hlavní menu"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Návrh%20obrazovek/Návrh2.png?raw=true)
 
 **Popis**: Zobrazení hlavního menu pro uživatele s administrátorskými právy.
 
 **3. Návrh obrazovky *"Blokace sportoviště"*:**
-![Návrh obrazovky "blokace sportoviště"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/src/main/java/com/github/ivavondrova/NeDuVoTeamProject/ui/Návrh3.png)
+![Návrh obrazovky "blokace sportoviště"](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Návrh%20obrazovek/Návrh3.png?raw=true)
 
 **Popis**: Zablokování sportoviště (např. z důvodu technických problémů apod.) ze strany zaměstnance/administrátora. V levé části obrazovky vidí navigaci (strom aplikace). Dále vybere konkrétní sportoviště a vyplní příslušné informace.
 
