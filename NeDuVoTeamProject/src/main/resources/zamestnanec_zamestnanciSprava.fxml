@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zamestnanciSprava">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zamestnanciSprava">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -57,6 +57,7 @@
             <Button layoutX="531.0" layoutY="383.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" onAction="#smazat_ucet" prefHeight="45.0" text="Smazat stávající" textAlignment="CENTER" wrapText="true" />
             <TextField fx:id="vstup" layoutX="155.0" layoutY="392.0" prefHeight="27.0" prefWidth="243.0" />
             <Label layoutX="29.0" layoutY="397.0" text="Uživatelské jméno" />
+            <Button layoutX="29.0" layoutY="435.0" mnemonicParsing="false" onAction="#navigation" prefHeight="25.0" prefWidth="168.0" text="Zpět do navigace" />
       </children>
     </AnchorPane>
   </children>

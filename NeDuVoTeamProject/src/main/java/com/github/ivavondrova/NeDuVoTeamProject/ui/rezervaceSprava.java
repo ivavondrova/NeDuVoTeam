@@ -5,6 +5,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,6 +21,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
 public class rezervaceSprava {
@@ -117,6 +122,25 @@ public class rezervaceSprava {
         alert.setHeaderText("Zahraj si \n4IT115 - Týmová semestrální práce");
         alert.setContentText("Vladimír Dušek, Petr Netolický, Iva Vondrová \nLS 2017/2018 \nFIS VŠE v Praze");
         alert.showAndWait();
+	}
+	
+	/**
+	 * Metoda, která zaměstnance vrátí do okna navigace.
+	 */
+	
+	public void navigation(ActionEvent event) throws Exception {
+		((Node)event.getSource()).getScene().getWindow().hide();
+		Stage primaryStage = new Stage();
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass()
+		          .getResource
+		          ("/zamestnanec_navigace.fxml"));
+		Parent root = loader.load();
+		zam_navigation controller = loader.getController();
+		
+      primaryStage.setTitle("Zaměstnanci - hlavní menu");
+      primaryStage.setScene(new Scene(root));
+      primaryStage.show();
 	}
 
 }

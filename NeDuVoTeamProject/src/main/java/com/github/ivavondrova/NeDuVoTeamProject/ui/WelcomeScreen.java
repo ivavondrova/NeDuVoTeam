@@ -71,7 +71,7 @@ public class WelcomeScreen {
         alert.setContentText("Vladimír Dušek, Petr Netolický, Iva Vondrová \nLS 2017/2018 \nFIS VŠE v Praze");
         alert.showAndWait();
 	}
-	
+		
 }	    
 	  
 

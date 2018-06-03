@@ -86,4 +86,21 @@ public class zam_navigation {
 		
 	}
 	
+	/**
+	 * Metoda, která vrátí uživatele zpět na úvodní obrazovku.
+	 */
+	
+	public void uvod(ActionEvent event) throws Exception {
+		((Node)event.getSource()).getScene().getWindow().hide();
+		FXMLLoader loader = new FXMLLoader();
+		Stage primaryStage = new Stage();
+		loader.setLocation(getClass().getResource("/uvod_hlavniMenu.fxml"));
+		Parent root = loader.load();
+		WelcomeScreen controller = loader.getController();
+		
+        primaryStage.setTitle("Zahraj si");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+	}
+	
 }

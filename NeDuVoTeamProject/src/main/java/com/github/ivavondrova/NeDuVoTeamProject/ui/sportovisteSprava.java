@@ -180,5 +180,24 @@ public class sportovisteSprava implements Initializable {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	/**
+	 * Metoda, která zaměstnance vrátí do okna navigace.
+	 */
+	
+	public void navigation(ActionEvent event) throws Exception {
+		((Node)event.getSource()).getScene().getWindow().hide();
+		Stage primaryStage = new Stage();
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass()
+		          .getResource
+		          ("/zamestnanec_navigace.fxml"));
+		Parent root = loader.load();
+		zam_navigation controller = loader.getController();
+		
+      primaryStage.setTitle("Zaměstnanci - hlavní menu");
+      primaryStage.setScene(new Scene(root));
+      primaryStage.show();
+	}
 
 }

@@ -16,11 +16,15 @@ import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javafx.scene.control.CheckBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -72,7 +76,7 @@ public class RezervationScreen{
 				e.printStackTrace();
 			}
 		
-	casy = FXCollections.observableArrayList("6","7","8","9","10","11","12","13","14","15","16","17");
+	casy = FXCollections.observableArrayList("6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00");
 	cas.setItems(casy);
 	sport.setItems(sportoviste);
 	}
@@ -239,4 +243,20 @@ public class RezervationScreen{
 		}
 	}
 	
+	/**
+	 * Metoda, která vrátí uživatele zpět na úvodní obrazovku.
+	 */
+	
+	public void uvod(ActionEvent event) throws Exception {
+		((Node)event.getSource()).getScene().getWindow().hide();
+		FXMLLoader loader = new FXMLLoader();
+		Stage primaryStage = new Stage();
+		loader.setLocation(getClass().getResource("/uvod_hlavniMenu.fxml"));
+		Parent root = loader.load();
+		WelcomeScreen controller = loader.getController();
+		
+        primaryStage.setTitle("Zahraj si");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+	}
 }

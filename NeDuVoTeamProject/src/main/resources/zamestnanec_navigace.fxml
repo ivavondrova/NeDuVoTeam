@@ -42,6 +42,7 @@
                      </items></Menu>
             </menus>
           </MenuBar>
+            <Button layoutX="28.0" layoutY="370.0" mnemonicParsing="false" onAction="#uvod" prefHeight="25.0" prefWidth="159.0" text="Zpět do hlavnho menu" />
       </children>
     </AnchorPane>
   </children>

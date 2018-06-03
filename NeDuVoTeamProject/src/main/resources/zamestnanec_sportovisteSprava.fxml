@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.sportovisteSprava">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.sportovisteSprava">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -61,6 +61,7 @@
             <Label layoutX="31.0" layoutY="389.0" text="Název sportoviště" />
             <TextField fx:id="vstup" layoutX="185.0" layoutY="384.0" prefHeight="25.0" prefWidth="181.0" />
             <Button layoutX="185.0" layoutY="300.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" onAction="#vypsat" prefHeight="45.0" prefWidth="99.0" text="Zobrazit výpis" textAlignment="CENTER" textFill="#9a4d12" wrapText="true" />
+            <Button layoutX="49.0" layoutY="429.0" mnemonicParsing="false" onAction="#navigation" prefHeight="25.0" prefWidth="137.0" text="Zpět do navigace" />
       </children>
     </AnchorPane>
   </children>
