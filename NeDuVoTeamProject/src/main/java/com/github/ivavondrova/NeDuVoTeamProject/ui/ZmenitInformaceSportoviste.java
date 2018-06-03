@@ -1,5 +1,11 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
+/*******************************************************************************
+ * Třída zamestnanecInformaceSportoviste slouží jako controller k zamestnanec_sportovisteSprava.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
+
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
 
@@ -10,14 +16,14 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
+import com.github.ivavondrova.NeDuVoTeamProject.logika.SqliteConnection;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 
-public class zmenitInformaceSportoviste {
+public class ZmenitInformaceSportoviste {
 	
 	@FXML private MenuBar menu;
 	@FXML private TextField nazev;
@@ -38,7 +44,7 @@ public class zmenitInformaceSportoviste {
 	 */
 	
 	 public void editace_sportoviste(ActionEvent event) {
-		 connection = sqliteConnection.dbConnector();
+		 connection = SqliteConnection.dbConnector();
 			if (connection==null)System.exit(1);
 		
 		 try {

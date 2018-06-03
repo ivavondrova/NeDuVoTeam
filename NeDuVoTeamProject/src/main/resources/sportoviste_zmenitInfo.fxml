@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="609.0" maxWidth="922.0" prefHeight="609.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.zmenitInformaceSportoviste">
+<VBox maxHeight="609.0" maxWidth="922.0" prefHeight="609.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.ZmenitInformaceSportoviste">
   <children>
     <MenuBar fx:id="menu" VBox.vgrow="NEVER">
       <menus>

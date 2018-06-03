@@ -1,5 +1,11 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
+/*******************************************************************************
+ * Třída zamestnanecZmenaOU slouží jako controller k zamestnanec_zmanOU.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
+
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
 
@@ -10,14 +16,14 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
+import com.github.ivavondrova.NeDuVoTeamProject.logika.SqliteConnection;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 
-public class zamZmenaOU {
+public class ZamZmenaOU {
 	
 	@FXML private MenuBar menu;
 	@FXML private TextField jmeno;
@@ -37,7 +43,7 @@ public class zamZmenaOU {
 	 */
 	
 	 public void editace(ActionEvent event) {
-		 connection = sqliteConnection.dbConnector();
+		 connection = SqliteConnection.dbConnector();
 			if (connection==null)System.exit(1);
 		
 		 try {

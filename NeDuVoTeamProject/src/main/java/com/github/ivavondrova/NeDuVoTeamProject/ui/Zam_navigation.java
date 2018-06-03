@@ -1,5 +1,11 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
+/*******************************************************************************
+ * Třída zam_navigation slouží jako controller k zamestnanec_navigace.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
+
 import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
@@ -10,7 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
-public class zam_navigation {
+public class Zam_navigation {
 	
 	@FXML private MenuBar menu;
 	
@@ -38,7 +44,7 @@ public class zam_navigation {
 		          .getResource
 		          ("/zamestnanec_zamestnanciSprava.fxml"));
 		Parent root = loader.load();
-		zamestnanciSprava controller = loader.getController();
+		ZamestnanciSprava controller = loader.getController();
 		
       primaryStage.setTitle("Správa zaměstnanců");
       primaryStage.setScene(new Scene(root));
@@ -58,7 +64,7 @@ public class zam_navigation {
 		          .getResource
 		          ("/zamestnanec_sportovisteSprava.fxml"));
 		Parent root = loader.load();
-		sportovisteSprava controller = loader.getController();
+		SportovisteSprava controller = loader.getController();
 		
       primaryStage.setTitle("Správa sportovišť");
       primaryStage.setScene(new Scene(root));
@@ -78,7 +84,7 @@ public class zam_navigation {
 		          .getResource
 		          ("/zamestnanec_rezervaceSprava.fxml"));
 		Parent root = loader.load();
-		rezervaceSprava controller = loader.getController();
+		RezervaceSprava controller = loader.getController();
 		
       primaryStage.setTitle("Správa rezervací");
       primaryStage.setScene(new Scene(root));

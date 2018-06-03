@@ -1,5 +1,10 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
+/*******************************************************************************
+ * Třída RezervationScreen slouží jako controller k rezervace.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
 import javafx.scene.control.MenuBar;
 
 import java.sql.Connection;
@@ -11,8 +16,9 @@ import java.time.format.DateTimeFormatter;
 
 import javax.swing.JOptionPane;
 
+import com.github.ivavondrova.NeDuVoTeamProject.logika.Rezervace;
 import com.github.ivavondrova.NeDuVoTeamProject.logika.Sportoviste;
-import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
+import com.github.ivavondrova.NeDuVoTeamProject.logika.SqliteConnection;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,6 +30,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.scene.control.CheckBox;
 import javafx.collections.FXCollections;
@@ -48,6 +55,7 @@ public class RezervationScreen{
 	int count =0;
 	
 	
+
 	
 	/**
 	 * Metoda, která nastavuje obsahy Checkboxů.
@@ -55,7 +63,7 @@ public class RezervationScreen{
 	
 	@FXML
 	private void initialize() {
-		connection = sqliteConnection.dbConnector();
+		connection = SqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		sportoviste.clear();
 		
@@ -80,10 +88,13 @@ public class RezervationScreen{
 	cas.setItems(casy);
 	sport.setItems(sportoviste);
 	}
-	
+
 	/**
 	 * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
 	 */
+
+     
+ 	
 	
 	public void oNas() {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -98,7 +109,7 @@ public class RezervationScreen{
 	 */
 
 	public void cenik(ActionEvent event) throws Exception {
-		connection = sqliteConnection.dbConnector();
+		connection = SqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		String seznam = "";
 		
@@ -124,14 +135,14 @@ public class RezervationScreen{
         alert.setHeaderText("Hodinové sazby pro jednotlivá sportoviště");
         alert.setContentText(seznam);
         alert.showAndWait();
-	}
 	
+	}
 	/**
 	 * Metoda, která po vyplnění příslušných údajů vytvoří novou rezervaci.
 	 */
 	
 	public void vytvorit(ActionEvent event) throws Exception {
-		 connection = sqliteConnection.dbConnector();
+		 connection = SqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		
 		LocalDate date = kalendar.getValue();
@@ -140,12 +151,17 @@ public class RezervationScreen{
 		String time = String.valueOf(cas.getValue());
 		String room = String.valueOf(sport.getValue());
 		
+		
+		if(date.isAfter(LocalDate.now()))
+		{	
+	
 		if(kontroladostupnosti(datum, time, room))
 			{
-			
-	
 		
-		try {String query="insert into rezervace (jmeno,telefon,mail,datum,hodinaRezervace,sportoviste) values (?,?,?,?,?,?)";
+		try {
+		
+						
+			String query="insert into rezervace (jmeno,telefon,mail,datum,hodinaRezervace,sportoviste) values (?,?,?,?,?,?)";
 			PreparedStatement pst=connection.prepareStatement(query);
 			pst.setString(1,jmeno.getText());
 			pst.setString(2,telefon.getText());
@@ -159,9 +175,6 @@ public class RezervationScreen{
 			JOptionPane.showMessageDialog(null, "Rezervace vytvořena");
 			pst.close();
 			if (volbaano.isSelected()) {
-				jmeno.setText("");
-				mail.setText("");
-				telefon.setText("");
 				kalendar.setValue(null);
 				cas.setValue(null);
 				sport.setValue(null);
@@ -178,7 +191,9 @@ public class RezervationScreen{
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
+			
 			}
+	
 		else
 		{
 			Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -187,8 +202,16 @@ public class RezervationScreen{
 	        alert.setContentText("V požadovém čase je sportovitě zarezervováno jiným klientem,/nvyberte prosím pro svou rezervaci jiný čas");
 	        alert.showAndWait();
 		}
+		}
+		else
+{
+			Alert alert = new Alert(Alert.AlertType.INFORMATION);
+	        alert.setTitle("Rezervace neúspěšná");
+	        alert.setHeaderText("Požadovanou rezervaci se nedopařilo vytvořit");
+	        alert.setContentText("Rezervace v aktuální nebo starším datu není možná");
+	        alert.showAndWait();
 }
-	
+	}
 	/**
 	 * Metoda, která ověřuje, zda pro dané sportoviště již neexistuje rezervace ve stanoveném čase.
 	 */
@@ -219,8 +242,9 @@ public class RezervationScreen{
 		{
 			return false;
 		}
-		
 	}
+	
+	
 	
 	/**
 	 * Metoda, která zajišťuje, aby nebyla označena rezervace dalšího sportoviště ANO i NE.
@@ -259,4 +283,6 @@ public class RezervationScreen{
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 	}
-}
+
+		}
+	

@@ -9,14 +9,19 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
+import com.github.ivavondrova.NeDuVoTeamProject.logika.SqliteConnection;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 
-public class tvorbaSportoviste {
+/*******************************************************************************
+ * Třída tvorbaSportoviste slouží jako controller k sportoviste_vytvoritSportoviste.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
+public class TvorbaSportoviste {
 	
 	@FXML private MenuBar menu;
 	@FXML private TextField nazev;
@@ -36,7 +41,7 @@ public class tvorbaSportoviste {
 	 */
 	
 	public void vytvorit_sportoviste(ActionEvent event) throws Exception {
-		 connection = sqliteConnection.dbConnector();
+		 connection = SqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		
 		 try {String query="insert into Sportoviste (nazev,popis,adresa,kapacita,cena,otevreno_od,otevreno_do) values (?,?,?,?,?,?,?)";

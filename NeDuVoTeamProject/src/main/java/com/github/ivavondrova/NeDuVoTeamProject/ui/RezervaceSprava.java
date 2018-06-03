@@ -1,4 +1,9 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
+/*******************************************************************************
+ * Třída rezervaceSprava slouží jako controller k zamestnanec_rezervaceSprava.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
 
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TableColumn;
@@ -15,7 +20,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 import com.github.ivavondrova.NeDuVoTeamProject.logika.Rezervace;
-import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
+import com.github.ivavondrova.NeDuVoTeamProject.logika.SqliteConnection;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -27,7 +32,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
-public class rezervaceSprava {
+public class RezervaceSprava {
 	ObservableList<com.github.ivavondrova.NeDuVoTeamProject.logika.Rezervace> data=FXCollections.observableArrayList();
 	@FXML private MenuBar menu;
 	@FXML private TableView<com.github.ivavondrova.NeDuVoTeamProject.logika.Rezervace> rezervace;
@@ -49,7 +54,7 @@ public class rezervaceSprava {
 	public void zobrazit(ActionEvent event) {
 		 
 		 rezervace.getItems().clear();
-		 connection = sqliteConnection.dbConnector();
+		 connection = SqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		
 	 try {
@@ -92,7 +97,7 @@ public class rezervaceSprava {
 	 * Metoda, která vymaže smaže danou rezervaci a ukáže hlášku o jeho smazání.
 	 */
 	 public void smazat(ActionEvent event) {
-		 connection = sqliteConnection.dbConnector();
+		 connection = SqliteConnection.dbConnector();
 			if (connection==null)System.exit(1);
 		
 		 try {
@@ -136,7 +141,7 @@ public class rezervaceSprava {
 		          .getResource
 		          ("/zamestnanec_navigace.fxml"));
 		Parent root = loader.load();
-		zam_navigation controller = loader.getController();
+		Zam_navigation controller = loader.getController();
 		
       primaryStage.setTitle("Zaměstnanci - hlavní menu");
       primaryStage.setScene(new Scene(root));

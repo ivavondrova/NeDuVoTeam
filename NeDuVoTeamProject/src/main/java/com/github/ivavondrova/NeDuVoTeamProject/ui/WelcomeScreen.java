@@ -1,5 +1,10 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
+/*******************************************************************************
+ * Třída WelcomeScreen slouží jako controller k uvod_hlavniMenu.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;

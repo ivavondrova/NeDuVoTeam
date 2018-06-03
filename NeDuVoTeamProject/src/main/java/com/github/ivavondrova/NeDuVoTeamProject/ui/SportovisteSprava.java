@@ -1,5 +1,11 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
 
+/*******************************************************************************
+ * Třída SpotovisteSprava slouží jako controller k zamestnanec_rezervaceSprava.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
+
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -18,9 +24,9 @@ import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 import java.sql.*;
-import com.github.ivavondrova.NeDuVoTeamProject.logika.Zamestnanec;
-import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
-import com.github.ivavondrova.NeDuVoTeamProject.ui.zamZmenaOU;
+import com.github.ivavondrova.NeDuVoTeamProject.logika.Sportoviste;
+import com.github.ivavondrova.NeDuVoTeamProject.logika.SqliteConnection;
+import com.github.ivavondrova.NeDuVoTeamProject.ui.ZmenitInformaceSportoviste;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -33,62 +39,60 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 
-
-
-
-
-
-/**
- * Metoda, která nastavuje vyskakovací okno s informacemi o nás.
- */
-
-public class zamestnanciSprava implements Initializable {
-	ObservableList<com.github.ivavondrova.NeDuVoTeamProject.logika.Zamestnanec> data=FXCollections.observableArrayList();
+public class SportovisteSprava implements Initializable {
+	
+	ObservableList<com.github.ivavondrova.NeDuVoTeamProject.logika.Sportoviste> data=FXCollections.observableArrayList();
+	
 	@FXML private MenuBar menu;
-	@FXML private TableView<com.github.ivavondrova.NeDuVoTeamProject.logika.Zamestnanec> vypis;
-	@FXML private TableColumn<?, ?> jmeno;
-	@FXML private TableColumn<?, ?> prijmeni;
-	@FXML private TableColumn<?, ?> uzivatelske_jmeno;
-	@FXML private TableColumn<?, ?> heslo;
-	@FXML private TableColumn<?, ?> telefon;
-	@FXML private TableColumn<?, ?> mail;
+	@FXML private TableView<com.github.ivavondrova.NeDuVoTeamProject.logika.Sportoviste> vypis;
+	@FXML private TableColumn<?, ?> nazev;
+	@FXML private TableColumn<?, ?> popis;
+	@FXML private TableColumn<?, ?> adresa;
+	@FXML private TableColumn<?, ?> kapacita;
+	@FXML private TableColumn<?, ?> cena;
+	@FXML private TableColumn<?, ?> otevreno_od;
+	@FXML private TableColumn<?, ?> otevreno_do;
 	@FXML private TextField vstup;
 		
 	Connection connection;
 	PreparedStatement preparedStatement=null;
 	ResultSet rs=null;
 	
+	
 	/**
-	 * Metoda, která vypíše všechny zaměstnance do tabulky.
+	 * Metoda, která do tabulky vypíše všechna sportoviště.
 	 */
 	
 	public void vypsat(ActionEvent event) {
 		 
-		 vypis.getItems().clear();
-		 connection = sqliteConnection.dbConnector();
+		vypis.getItems().clear();
+		connection = SqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		
 	 try {
 		
-		 jmeno.setCellValueFactory(new PropertyValueFactory<>("jmeno"));
-		 prijmeni.setCellValueFactory(new PropertyValueFactory<>("prijmeni"));
-		uzivatelske_jmeno.setCellValueFactory(new PropertyValueFactory<>("uzivatelske_jmeno"));
-		heslo.setCellValueFactory(new PropertyValueFactory<>("heslo"));
-		telefon.setCellValueFactory(new PropertyValueFactory<>("telefon"));
-		mail.setCellValueFactory(new PropertyValueFactory<>("mail"));
-		String query="select * from zamestnanec";
-		preparedStatement=connection.prepareStatement(query);
-		rs=preparedStatement.executeQuery();
+		 nazev.setCellValueFactory(new PropertyValueFactory<>("nazev"));
+		 popis.setCellValueFactory(new PropertyValueFactory<>("popis"));
+		 adresa.setCellValueFactory(new PropertyValueFactory<>("adresa"));
+		 kapacita.setCellValueFactory(new PropertyValueFactory<>("kapacita"));
+		 cena.setCellValueFactory(new PropertyValueFactory<>("cena"));
+		 otevreno_od.setCellValueFactory(new PropertyValueFactory<>("otevreno_od"));
+		 otevreno_do.setCellValueFactory(new PropertyValueFactory<>("otevreno_do"));
+		
+		 String query="select * from sportoviste";
+		 preparedStatement=connection.prepareStatement(query);
+		 rs=preparedStatement.executeQuery();
 			
 			while(rs.next())
 			{
-				data.add(new Zamestnanec(
-						rs.getString("jmeno"),
-						rs.getString("prijmeni"),
-						rs.getString("uzivatelske_jmeno"),
-						rs.getString("heslo"),
-						rs.getString("telefon"),
-						rs.getString("mail")
+				data.add(new Sportoviste(
+						rs.getString("nazev"),
+						rs.getString("popis"),
+						rs.getString("adresa"),
+						rs.getInt("kapacita"),
+						rs.getInt("cena"),
+						rs.getInt("otevreno_od"),
+						rs.getInt("otevreno_do")
 						));
 						vypis.setItems(data);
 					
@@ -103,27 +107,27 @@ public class zamestnanciSprava implements Initializable {
 	 }  
 	
 	/**
-	 * Metoda, která smaže příslušného zaměstnance.
+	 * Metoda, která vymaže dané sportoviště a ukáže hlášku o jeho smazání.
 	 */
 	
-	 public void smazat_ucet(ActionEvent event) {
-		 connection = sqliteConnection.dbConnector();
+	 public void smazat_sportoviste(ActionEvent event) {
+		 connection = SqliteConnection.dbConnector();
 			if (connection==null)System.exit(1);
 		
 		 try {
-			String query="delete from Zamestnanec where uzivatelske_jmeno='"+vstup.getText()+"' ";
+			String query="delete from Sportoviste where nazev='"+vstup.getText()+"' ";
 					PreparedStatement pst=connection.prepareStatement(query);
 					
 					
 					pst.execute();
 					
-				JOptionPane.showMessageDialog(null, "Uživatel smazán");
+				JOptionPane.showMessageDialog(null, "Sportoviště smazáno");
 					pst.close();
 		 } catch (SQLException e) {
 				
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			} 
 	 }
 	 
 	 	/**
@@ -137,46 +141,47 @@ public class zamestnanciSprava implements Initializable {
         alert.setContentText("Vladimír Dušek, Petr Netolický, Iva Vondrová \nLS 2017/2018 \nFIS VŠE v Praze");
         alert.showAndWait();
 	}
-
+	
 	/**
-	 * Metoda, která při volbě "vytvořit" otevře příslušné okno "Vytvořit nový účet".
+	 * Metoda, která při volbě "vytvořit sportoviště" otevírá nové okno.
 	 */
 	
-	public void vytvorit_ucet(ActionEvent event) throws Exception{
+	public void vytvorit_sportoviste(ActionEvent event) throws Exception{
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass()
 		          .getResource
-		          ("/zamestnanec_vytvoritUcet.fxml"));
+		          ("/sportoviste_vytvoritSportoviste.fxml"));
 		Parent root = loader.load();
-		zamestnanecTvorbaUctu controller = loader.getController();
+		TvorbaSportoviste controller = loader.getController();
 		
-      primaryStage.setTitle("Vytvořit nový účet");
+      primaryStage.setTitle("Vytvořit sportoviště");
       primaryStage.setScene(new Scene(root));
       primaryStage.show();
 		
 	}
 	
 	/**
-	 * Metoda, která při volbě "upravit" otevře příslušné okno "Upravit stávající účet".
+	 * Metoda, která při volbě "upravit sportoviště" otevírá nové okno.
 	 */
 	
-	public void upravit_ucet(ActionEvent event) throws Exception{
-		zamZmenaOU.n = vstup.getText();
+	public void upravit_sportoviste(ActionEvent event) throws Exception{
+		ZmenitInformaceSportoviste.n = vstup.getText();
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass()
 		          .getResource
-		          ("/zamestnanec_zmenaOU.fxml"));
+		          ("/sportoviste_zmenitInfo.fxml"));
 		Parent root = loader.load();
-		zamZmenaOU controller = loader.getController();
+		ZmenitInformaceSportoviste controller = loader.getController();
 		
-      primaryStage.setTitle("Upravit stávající účet");
+      primaryStage.setTitle("Upravit sportoviště");
       primaryStage.setScene(new Scene(root));
       primaryStage.show();
 		
 	}
 	
+	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		
@@ -194,10 +199,11 @@ public class zamestnanciSprava implements Initializable {
 		          .getResource
 		          ("/zamestnanec_navigace.fxml"));
 		Parent root = loader.load();
-		zam_navigation controller = loader.getController();
+		Zam_navigation controller = loader.getController();
 		
       primaryStage.setTitle("Zaměstnanci - hlavní menu");
       primaryStage.setScene(new Scene(root));
       primaryStage.show();
 	}
+
 }

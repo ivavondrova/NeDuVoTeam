@@ -1,13 +1,22 @@
 package com.github.ivavondrova.NeDuVoTeamProject.logika;
+
+/*******************************************************************************
+ * Třída LoginModel slouží k ověřování správných přihlašovacích údajů do databáze.
+ *
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
 import java.sql.*;
 public class LoginModel {
 	Connection connection;
 	
 	public LoginModel () {
-		connection = sqliteConnection.dbConnector();
+		connection = SqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 }
-	
+	/**
+	 * Metoda, která ověří připojení do databáze
+	 */	
 	public boolean isDbConnected() {
 		try {
 			return !connection.isClosed();
@@ -17,6 +26,10 @@ public class LoginModel {
 			return false;
 		}
 	}
+	
+	/**
+	 * Metoda, která ověří, že byly přihlašovací údaje správné
+	 */
 		public boolean isLogin(String user, String pass) throws SQLException {
 			PreparedStatement preparedStatement = null;
 			ResultSet resultSet= null;

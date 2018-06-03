@@ -1,4 +1,10 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
+/*******************************************************************************
+ * Třída zamestnanecTvorbaUctu slouží jako controller k zamestnanec_vytvoritUcet.fxml
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
+
 import com.github.ivavondrova.NeDuVoTeamProject.logika.Zamestnanec;
 
 import javafx.scene.control.MenuBar;
@@ -11,14 +17,14 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-import com.github.ivavondrova.NeDuVoTeamProject.logika.sqliteConnection;
+import com.github.ivavondrova.NeDuVoTeamProject.logika.SqliteConnection;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 
-public class zamestnanecTvorbaUctu {
+public class ZamestnanecTvorbaUctu {
 	
 	@FXML private MenuBar menu;
 	@FXML private TextField jmeno;
@@ -36,7 +42,7 @@ public class zamestnanecTvorbaUctu {
 	 */
 	
 	public void vytvorit(ActionEvent event) throws Exception {
-		 connection = sqliteConnection.dbConnector();
+		 connection = SqliteConnection.dbConnector();
 		if (connection==null)System.exit(1);
 		
 		 try {String query="insert into Zamestnanec (jmeno,prijmeni,uzivatelske_jmeno,heslo,telefon,mail) values (?,?,?,?,?,?)";

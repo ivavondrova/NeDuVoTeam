@@ -1,4 +1,11 @@
 package com.github.ivavondrova.NeDuVoTeamProject.ui;
+/*******************************************************************************
+ * Třída LoginModel slouží jako controller k zamestnanec_prihlaseni.fxml
+ *
+ * @author     Vladimír Dušek, Petr Netolický, Iva Vondrová
+ * @version    LS 2017/2018 
+ */
+
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -58,7 +65,7 @@ public class LoginController implements Initializable{
 						          .getResource
 						          ("/zamestnanec_navigace.fxml"));
 						Parent root = loader.load();
-						zam_navigation controller = loader.getController();
+						Zam_navigation controller = loader.getController();
 						
 				      primaryStage.setTitle("Zaměstnanci - hlavní menu");
 				      primaryStage.setScene(new Scene(root));

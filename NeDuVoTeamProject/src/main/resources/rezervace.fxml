@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.RezervationScreen">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.RezervationScreen">
   <children>
     <MenuBar fx:id="menu" VBox.vgrow="NEVER">
       <menus>
@@ -30,41 +30,42 @@
                </items></Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane dividerPositions="0.2505567928730512, 0.5" focusTraversable="true" prefHeight="575.0" prefWidth="753.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane opacity="0.46" style="-fx-background-color: brown;">
-               <children>
-                  <Button layoutX="30.0" layoutY="470.0" mnemonicParsing="false" onAction="#uvod" prefHeight="25.0" prefWidth="159.0" text="Návrat od hlavnho menu" />
-               </children></AnchorPane>
+        <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.46" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: brown;" />
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="548.0" prefWidth="430.0" style="-fx-background-color: #00ffbf00ffbf;">
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="571.0" prefWidth="687.0" style="-fx-background-color: #00ffbf00ffbf;">
               <children>
-                        <ImageView fitHeight="658.0" fitWidth="785.0" layoutX="-196.0" layoutY="-19.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="589.0" fitWidth="805.0" layoutX="-16.0" layoutY="-18.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@Sportoviště%201.jpg" />
                            </image>
                         </ImageView>
-                        <Label layoutX="39.0" layoutY="112.0" text="Den" />
-                        <DatePicker fx:id="kalendar" layoutX="184.0" layoutY="108.0" />
-                        <Label layoutX="40.0" layoutY="177.0" text="Čas" />
-                        <ChoiceBox fx:id="cas" layoutX="184.0" layoutY="172.0" prefHeight="27.0" prefWidth="193.0" />
-                        <CheckBox fx:id="volbaano" layoutX="282.0" layoutY="302.0" mnemonicParsing="false" onAction="#checksymetryY" text="ANO" />
-                        <CheckBox fx:id="volbane" layoutX="282.0" layoutY="341.0" mnemonicParsing="false" onAction="#checksymetryN" prefHeight="17.0" prefWidth="57.0" text="NE" />
-                        <Label layoutX="40.0" layoutY="302.0" text="Přejete si rezervovat další sportoviště?" />
-                        <Label layoutX="36.0" layoutY="60.0" text="Sportoviště" />
-                        <ChoiceBox fx:id="sport" layoutX="184.0" layoutY="56.0" prefWidth="150.0" />
+                        <Label layoutX="34.0" layoutY="91.0" text="Den" />
+                        <DatePicker fx:id="kalendar" layoutX="261.0" layoutY="87.0" promptText="Datum" />
+                        <Label layoutX="34.0" layoutY="144.0" prefHeight="17.0" prefWidth="37.0" text="Čas" />
+                        <ChoiceBox fx:id="cas" layoutX="261.0" layoutY="139.0" prefHeight="27.0" prefWidth="149.0" />
+                        <CheckBox fx:id="volbaano" layoutX="266.0" layoutY="340.0" mnemonicParsing="false" onAction="#checksymetryY" text="ANO" />
+                        <CheckBox fx:id="volbane" layoutX="266.0" layoutY="364.0" mnemonicParsing="false" onAction="#checksymetryN" prefHeight="17.0" prefWidth="57.0" text="NE" />
+                        <Label layoutX="37.0" layoutY="348.0" text="Přejete si rezervovat další sportoviště?" />
+                        <Label layoutX="32.0" layoutY="39.0" text="Sportoviště" />
+                        <ChoiceBox fx:id="sport" layoutX="261.0" layoutY="35.0" prefHeight="27.0" prefWidth="149.0" />
+                        <TextField fx:id="jmeno" layoutX="259.0" layoutY="195.0" promptText="Jméno" />
+                        <Button layoutX="175.0" layoutY="436.0" mnemonicParsing="false" onAction="#vytvorit" prefHeight="36.0" prefWidth="159.0" text="Dokončit" />
+                        <TextField fx:id="telefon" layoutX="261.0" layoutY="285.0" promptText="Telefon" />
+                        <TextField fx:id="mail" layoutX="259.0" layoutY="239.0" promptText="Mail" />
+                        <Label layoutX="37.0" layoutY="199.0" prefHeight="17.0" prefWidth="49.0" text="Jméno" />
+                        <Label layoutX="36.0" layoutY="243.0" prefHeight="17.0" prefWidth="49.0" text="Mail" />
+                        <Label layoutX="36.0" layoutY="289.0" prefHeight="17.0" prefWidth="49.0" text="Telefon" />
               </children>
             </AnchorPane>
           </content>
         </ScrollPane>
-        <AnchorPane opacity="0.4" style="-fx-background-color: brown;">
-          <children>
-                  <Button layoutX="63.0" layoutY="329.0" mnemonicParsing="false" onAction="#vytvorit" prefHeight="25.0" prefWidth="90.0" text="Dokončit" />
-                  <TextField fx:id="jmeno" layoutX="33.0" layoutY="110.0" promptText="Jméno" />
-                  <TextField fx:id="mail" layoutX="33.0" layoutY="173.0" promptText="Mail" />
-                  <TextField fx:id="telefon" layoutX="33.0" layoutY="238.0" promptText="Telefon" />
-          </children>
+        <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.4" prefHeight="573.0" prefWidth="150.0" style="-fx-background-color: brown;">
+               <children>
+                  <Button layoutX="6.0" layoutY="66.0" mnemonicParsing="false" onAction="#uvod" prefHeight="25.0" prefWidth="139.0" text="Návrat do menu" />
+               </children>
         </AnchorPane>
       </items>
     </SplitPane>
