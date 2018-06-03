@@ -5,20 +5,16 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.RezervationScreen">
   <children>
@@ -30,7 +26,10 @@
             <MenuItem mnemonicParsing="false" text="Close" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" onAction="#cenik" text="Ceník" />
+        <Menu mnemonicParsing="false" text="Ceník">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cenik" text="Ceník" />
+               </items></Menu>
         <Menu mnemonicParsing="false" text="O nás">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#oNas" text="O nás" />
@@ -39,19 +38,7 @@
     </MenuBar>
     <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane opacity="0.46" style="-fx-background-color: brown;">
-          <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Sportoviště" textAlignment="CENTER" wrapText="false">
-              <font>
-                <Font size="18.0" fx:id="x1" />
-              </font>
-              <textFill>
-                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
-              </textFill>
-            </Label>
-                  <ListView layoutX="11.0" layoutY="52.0" prefHeight="478.0" prefWidth="187.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="55.0" />
-          </children>
-        </AnchorPane>
+        <AnchorPane opacity="0.46" style="-fx-background-color: brown;" />
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="548.0" prefWidth="430.0" style="-fx-background-color: #00ffbf00ffbf;">
@@ -62,26 +49,24 @@
                            </image>
                         </ImageView>
                         <Label layoutX="39.0" layoutY="112.0" text="Den" />
-                        <DatePicker layoutX="184.0" layoutY="108.0" />
+                        <DatePicker fx:id="kalendar" layoutX="184.0" layoutY="108.0" />
                         <Label layoutX="40.0" layoutY="177.0" text="Čas" />
-                        <ChoiceBox layoutX="184.0" layoutY="172.0" prefHeight="27.0" prefWidth="193.0" />
-                        <CheckBox layoutX="282.0" layoutY="302.0" mnemonicParsing="false" text="ANO" />
-                        <CheckBox layoutX="282.0" layoutY="341.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="57.0" text="NE" />
+                        <ChoiceBox fx:id="cas" layoutX="184.0" layoutY="172.0" prefHeight="27.0" prefWidth="193.0" />
+                        <CheckBox fx:id="volbaano" layoutX="282.0" layoutY="302.0" mnemonicParsing="false" onAction="#checksymetryY" text="ANO" />
+                        <CheckBox fx:id="volbane" layoutX="282.0" layoutY="341.0" mnemonicParsing="false" onAction="#checksymetryN" prefHeight="17.0" prefWidth="57.0" text="NE" />
                         <Label layoutX="40.0" layoutY="302.0" text="Přejete si rezervovat další sportoviště?" />
                         <Label layoutX="36.0" layoutY="60.0" text="Sportoviště" />
-                        <ChoiceBox layoutX="184.0" layoutY="56.0" prefWidth="150.0" />
+                        <ChoiceBox fx:id="sport" layoutX="184.0" layoutY="56.0" prefWidth="150.0" />
               </children>
             </AnchorPane>
           </content>
         </ScrollPane>
         <AnchorPane opacity="0.4" style="-fx-background-color: brown;">
           <children>
-                  <Button layoutX="79.0" layoutY="492.0" mnemonicParsing="false" text="Dokončit" />
-                  <TextField layoutX="33.0" layoutY="303.0" text="Jméno" />
-                  <TextField layoutX="33.0" layoutY="367.0" text="Mail" />
-                  <TextField layoutX="34.0" layoutY="423.0" text="Telefon" />
-            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Váš výběr" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                  <TextArea layoutX="14.0" layoutY="53.0" prefHeight="188.0" prefWidth="234.0" text="Sportoviště....&#10;&#10;Den...&#10;&#10;Cena...." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button layoutX="63.0" layoutY="329.0" mnemonicParsing="false" onAction="#vytvorit" prefHeight="25.0" prefWidth="90.0" text="Dokončit" />
+                  <TextField fx:id="jmeno" layoutX="33.0" layoutY="110.0" promptText="Jméno" />
+                  <TextField fx:id="mail" layoutX="33.0" layoutY="173.0" promptText="Mail" />
+                  <TextField fx:id="telefon" layoutX="33.0" layoutY="238.0" promptText="Telefon" />
           </children>
         </AnchorPane>
       </items>

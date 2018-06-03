@@ -92,7 +92,7 @@ public class Sportoviste {
 		 * 
 		 * setNazev				@return 		nastaví název sportoviště
 		 * setPopis				@return 		nastaví popis sportoviště
-		 * setAdresa				@return 		nastaví adresu sportoviště
+		 * setAdresa			@return 		nastaví adresu sportoviště
 		 * setKapacita			@return 		nastaví maximální kapacitu sportoviště
 		 * setCena				@return 		nastaví cenu za pronájem sportoviště
 		 * setOtevreno_do		@return 		nastaví informace o otevírací době sportoviště
