@@ -66,7 +66,13 @@ Use Case Specifikaci můžete najít na následujícím odkazu: [Use Case Specif
 
 Příklad databázové struktury je dostupný na následujícím odkazu: [Databázová struktura](https://github.com/ivavondrova/NeDuVoTeam/blob/master/NeDuVoTeamProject/Navrh_reseni/Struktura-databáze.xlsx). (Dokument je nutné si stáhnout.)
 
-
+### Úpravy při realizaci
+Po domluvě s vyučujícím odebrána třída admin a tím pádem není nutná třída osoba s přístupem, blokace a spotovní areál. 
+Důvody: Sportovní areál není potřeba, protože je aplikace pouze pro jeden sportovní areál "Zahrajsi"
+Admin není potřeba, všechny privilegia admina mohou provádět pro snadnější práci s daty a zaměstnanci i sami zaměstnanci.
+Blokace není potřeba, sportoviště se může odebrat, takže plní funkci třídy "blokace".
+Osoba s přístupem není potřeba, jedná se nyní pouze o třídu zaměstnanec, která jediná má přístup.
+Poslední úprava byla, že klient nemá dovoleno pouze vytvářet rezervace, nikoliv je vypisovat - kvůli ochraně osobních údajů dalších klientů. Nemůže je také svévolně mazat, aby se nerezervoval a pak to zase neodvolal.
 
 
 
