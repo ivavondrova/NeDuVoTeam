@@ -15,6 +15,7 @@ public class Rezervace {
 	private int id;
 	private String datum;
 	private String hodinaRezervace;
+	private String sportoviste;
 	
 	/**
 	    * Konstruktor pro vytvoření rezervace
@@ -29,7 +30,7 @@ public class Rezervace {
 	    * 
 	    */
 	
-		public Rezervace (String jmeno, int telefon, String mail, int id, String datum, String hodinaRezervace) 
+		public Rezervace (String jmeno, int telefon, String mail, int id, String datum, String hodinaRezervace, String sportoviste) 
 		{
 			this.jmeno = jmeno;
 			this.telefon = telefon;
@@ -37,6 +38,7 @@ public class Rezervace {
 			this.id = id;
 			this.datum = datum;
 			this.hodinaRezervace = hodinaRezervace;
+			this.sportoviste = sportoviste;
 		}
 		
 		/**
@@ -48,7 +50,7 @@ public class Rezervace {
 		 * getId					@return		vrací id rezervace
 		 * getDatum				@return		vrací datum rezervace
 		 * getHodinaRezervace	@return		vrací čas rezervace
-		 *	
+		 *getSportoviste	@return		    vrací sportoviste
 		 */
 		
 		public String getJmeno() 
@@ -80,6 +82,10 @@ public class Rezervace {
 		{
 			return hodinaRezervace;
 		}
+		public String getSportoviste() 
+		{
+			return sportoviste;
+		}
 		
 		
 		/**
@@ -91,7 +97,7 @@ public class Rezervace {
 		 * setId						@return		nastaví id rezervace
 		 * setDatum					@return		nastaví datum rezervace
 		 * setHodinaRezervace		@return		nastaví hodinu rezervace
-		 * 
+		 * setSportoviste		@return		nastaví sportoviste
 		 */
 		
 		public void setJmeno(String jmeno) 
@@ -123,6 +129,9 @@ public class Rezervace {
 		{
 			this.hodinaRezervace = hodinaRezervace;
 		}
-
+		public void setSportovsite(String sportoviste) 
+		{
+			this.sportoviste = sportoviste;
+		}
 
 }

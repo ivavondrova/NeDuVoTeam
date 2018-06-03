@@ -7,13 +7,14 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.rezervaceSprava">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.ivavondrova.NeDuVoTeamProject.ui.rezervaceSprava">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
@@ -27,15 +28,19 @@
                   <Image url="@Sportoviště%201.jpg" />
                </image>
             </ImageView>
-            <TableView layoutX="30.0" layoutY="95.0" prefHeight="200.0" prefWidth="583.0">
+            <TableView fx:id="rezervace" layoutX="30.0" layoutY="95.0" prefHeight="200.0" prefWidth="583.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="id" prefWidth="52.0" text="ID" />
+                <TableColumn fx:id="jmeno" prefWidth="87.0" text="Jmeno" />
+                  <TableColumn fx:id="telefon" prefWidth="86.0" text="Telefon" />
+                  <TableColumn fx:id="mail" prefWidth="75.0" text="Mail" />
+                  <TableColumn fx:id="datum" prefWidth="69.0" text="Datum" />
+                  <TableColumn fx:id="hodinaRezervace" prefWidth="117.0" text="Hodina rezervace" />
+                  <TableColumn fx:id="sportoviste" prefWidth="95.0" text="Sportoviste" />
               </columns>
             </TableView>
-            <Button layoutX="431.0" layoutY="348.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" text="Smazat stávající" textAlignment="CENTER" wrapText="true" />
-            <Button layoutX="274.0" layoutY="346.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" text="Upravit stávající" textAlignment="CENTER" wrapText="true" />
-            <Button layoutX="108.0" layoutY="346.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" text="Vytvořit novou" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="468.0" layoutY="371.0" maxHeight="60.0" maxWidth="100.0" mnemonicParsing="false" onAction="#smazat" text="Smazat stávající" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="240.0" layoutY="315.0" maxHeight="60.0" maxWidth="188.0" mnemonicParsing="false" onAction="#zobrazit" prefHeight="29.0" prefWidth="176.0" text="Zobrazit rezervace" textAlignment="CENTER" wrapText="true" />
             <Label alignment="CENTER" layoutX="30.0" layoutY="49.0" style="&#10;" text="Rezervace" textAlignment="CENTER" textFill="#9a4d12" wrapText="false">
                <font>
                   <Font size="18.0" fx:id="x1" />
@@ -49,6 +54,12 @@
                      </items></Menu>
                </menus>
             </MenuBar>
+            <TextField fx:id="vyplnit" layoutX="179.0" layoutY="371.0" prefHeight="25.0" prefWidth="271.0" />
+            <Label layoutX="56.0" layoutY="375.0" prefHeight="20.0" prefWidth="100.0" text="Id rezervace">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
       </children>
     </AnchorPane>
   </children>
